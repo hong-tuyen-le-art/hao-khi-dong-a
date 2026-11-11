@@ -363,7 +363,10 @@
 
   // Đặt lời thoại và tư liệu sau dải ảnh để các trang tranh nối liền nhau.
   function renderChapterNotesHTML(chap) {
-    const notesHTML = chap.pages.filter(p => p.dialogue).map(p => `
+    const notePages = chap.pages.filter((page, index, pages) => (
+      page.dialogue && pages.findIndex(item => item.dialogue === page.dialogue) === index
+    ));
+    const notesHTML = notePages.map(p => `
         <div class="p-4 sm:p-5 space-y-3 webtoon-dialogue-box">
           <h4 class="text-sm font-bold text-[#8B1E1E]">${p.title}</h4>
 
@@ -415,7 +418,7 @@
 
     return notesHTML ? `
       <details class="p-4 border-y border-[#D4A359]/40">
-        <summary class="cursor-pointer text-sm font-bold text-[#8B1E1E]">Lời thoại và tư liệu của hồi</summary>
+        <summary class="cursor-pointer text-sm font-bold text-[#8B1E1E]">Tư liệu mở rộng</summary>
         ${notesHTML}
       </details>
     ` : '';
@@ -426,63 +429,24 @@
     const nextChap = chap.nextChapId ? COMIC_CHAPTERS[chap.nextChapId] : null;
 
     return `
-      <section class="mt-6 p-6 sm:p-8 bg-gradient-to-b from-[#FAF7F0] to-[#EFE3CA] border-2 border-[#D4A359] rounded-2xl shadow-xl text-center space-y-5">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8B1E1E] text-white text-xs font-bold tracking-wider uppercase">
-          ✦ HOÀN THÀNH ${chap.title.split(':')[0].toUpperCase()} ✦
+      <section class="reader-chapter-end">
+        <span class="reader-chapter-end__mark">✓</span>
+        <div>
+          <span class="reader-chapter-end__eyebrow">Đã đọc xong</span>
+          <h3>${chap.title}</h3>
         </div>
-
-        <h3 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917]">
-          ${chap.title}
-        </h3>
-
-        <!-- Lời bình sử gia Đông A -->
-        <div class="max-w-2xl mx-auto p-4 bg-white/80 rounded-xl border border-[#D4A359]/40 text-xs sm:text-sm text-[#44403C] leading-relaxed text-left space-y-2">
-          <div class="flex items-center gap-2 font-bold text-[#8B1E1E]">
-            <span>📜 Lời bình sử gia Đông A:</span>
-          </div>
-          <p class="italic text-[#57534E]">
-            "${chap.historicalNote}"
-          </p>
-        </div>
-
-        <!-- Các nút hành động đọc tiếp -->
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div class="reader-chapter-end__actions">
           ${nextChap ? `
             <button
               onclick="window.openChapter('${nextChap.id}')"
-              class="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#8B1E1E] to-[#A82828] hover:brightness-110 text-white font-bold text-sm rounded-xl shadow-lg border border-[#D4A359] transition-all transform hover:scale-105 cursor-pointer flex items-center justify-center gap-2"
+              class="reader-chapter-end__next"
             >
-              <span>ĐỌC TIẾP HỒI ${nextChap.chapterNum}: ${nextChap.title.split(':')[1] || ''}</span>
-              <span>➔</span>
-            </button>
-
-            <button
-              onclick="window.appendNextChapter()"
-              class="w-full sm:w-auto px-5 py-3 bg-white hover:bg-[#FAF7F0] text-[#785928] hover:text-[#8B1E1E] font-bold text-xs rounded-xl border-2 border-[#D4A359] transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-sm"
-              title="Nối tiếp hồi tiếp theo ngay bên dưới để cuộn đọc không ngắt quãng"
-            >
-              <span>⬇ Kéo dài đọc tiếp bên dưới</span>
+              <span>Đọc Hồi ${nextChap.chapterNum}</span><span>→</span>
             </button>
           ` : `
-            <div class="space-y-3">
-              <div class="p-3 bg-[#235347]/10 border border-[#235347]/40 rounded-xl text-xs text-[#235347] font-bold">
-                🎉 Bạn đã hoàn thành toàn bộ 3 Hồi sử thi hào hùng của Đại Việt thời Trần!
-              </div>
-              <button
-                onclick="window.navigateTo('trac-nghiem')"
-                class="px-6 py-3 bg-[#235347] hover:bg-[#1b4339] text-white font-bold text-sm rounded-xl shadow-md transition-all cursor-pointer inline-flex items-center gap-2"
-              >
-                <span>🏆 Thử tài sử học ngay</span> <span>➔</span>
-              </button>
-            </div>
+            <button onclick="window.navigateTo('trac-nghiem')" class="reader-chapter-end__next"><span>Thử tài sử học</span><span>→</span></button>
           `}
-
-          <button
-            onclick="window.scrollToReaderTop()"
-            class="w-full sm:w-auto px-4 py-3 text-xs font-semibold text-[#78716C] hover:text-[#1C1917] transition-colors cursor-pointer"
-          >
-            ▲ Lên đầu Hồi
-          </button>
+          <button onclick="window.scrollToReaderTop()" class="reader-chapter-end__top">↑ Lên đầu</button>
         </div>
       </section>
     `;
@@ -507,7 +471,7 @@
     if (mainTitle) mainTitle.textContent = chap.title;
 
     const subTitle = document.getElementById('chapter-sub-title');
-    if (subTitle) subTitle.textContent = `${chap.subtitle} · ${chap.epoch}`;
+    if (subTitle) subTitle.textContent = chap.subtitle;
 
     const summaryBox = document.getElementById('chapter-summary-text');
     if (summaryBox) summaryBox.textContent = chap.summary;
@@ -516,11 +480,9 @@
     ['chap-1', 'chap-2', 'chap-3'].forEach(ch => {
       const btn = document.getElementById(`btn-${ch}`);
       if (!btn) return;
-      if (ch === chap.id) {
-        btn.className = "px-3.5 py-2 text-xs font-bold whitespace-nowrap rounded-md transition-all cursor-pointer bg-[#8B1E1E] text-white shadow-md border border-[#8B1E1E]";
-      } else {
-        btn.className = "px-3.5 py-2 text-xs font-bold whitespace-nowrap rounded-md transition-all cursor-pointer text-[#44403C] hover:text-[#8B1E1E] hover:bg-white/60";
-      }
+      const isActive = ch === chap.id;
+      btn.classList.toggle('chapter-card-active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
     });
 
     // Render toàn bộ các trang của Hồi này theo dải dọc
@@ -530,12 +492,6 @@
       const endHTML = renderChapterNotesHTML(chap) + renderChapterEndHTML(chap);
       stripContainer.innerHTML = `
         <div id="chapter-block-${chap.id}" class="webtoon-chapter-strip animate-fade-in">
-          <div class="px-4 py-3 bg-[#EFE3CA]/80 rounded-xl border border-[#D4A359]/50 flex items-center justify-between text-xs mb-4">
-            <span class="font-bold text-[#8B1E1E] flex items-center gap-1.5">
-              <span>📖</span> <span>${chap.title}</span>
-            </span>
-            <span class="text-[11px] text-[#785928] font-semibold">Trọn bộ ${chap.pages.length} trang tranh vẽ</span>
-          </div>
           ${pagesHTML}
           ${endHTML}
         </div>
@@ -616,9 +572,9 @@
       ['chap-1', 'chap-2', 'chap-3'].forEach(ch => {
         const btn = document.getElementById(`btn-${ch}`);
         if (!btn) return;
-        if (ch === nextChap.id) {
-          btn.className = "px-3.5 py-2 text-xs font-bold whitespace-nowrap rounded-md transition-all cursor-pointer bg-[#8B1E1E] text-white shadow-md border border-[#8B1E1E]";
-        }
+        const isActive = ch === nextChap.id;
+        btn.classList.toggle('chapter-card-active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
       });
 
       updateSidebarDirectory();
@@ -812,7 +768,9 @@
 
     const themeBtns = document.querySelectorAll('.btn-toggle-theme');
     themeBtns.forEach(btn => {
-      btn.innerHTML = isWebtoonDarkMode ? '<span>📜</span> <span>Nền giấy cổ</span>' : '<span>🎬</span> <span>Nền rạp chiếu tối</span>';
+      btn.innerHTML = isWebtoonDarkMode
+        ? '<span>📜</span><span class="hidden sm:inline">Nền sáng</span>'
+        : '<span>🎬</span><span class="hidden sm:inline">Nền tối</span>';
     });
   };
 
@@ -853,14 +811,14 @@
       }
       if (wrapper) wrapper.classList.add('fullscreen-reader-active');
       isFullscreenActive = true;
-      toggleBtns.forEach(b => b.innerHTML = '<span>✕</span> <span>Thu nhỏ</span>');
+      toggleBtns.forEach(b => b.innerHTML = '<span>✕</span><span class="hidden sm:inline">Thu nhỏ</span>');
     } else {
       if (document.exitFullscreen && document.fullscreenElement) {
         document.exitFullscreen().catch(() => {});
       }
       if (wrapper) wrapper.classList.remove('fullscreen-reader-active');
       isFullscreenActive = false;
-      toggleBtns.forEach(b => b.innerHTML = '<span>⛶</span> <span>Toàn màn hình</span>');
+      toggleBtns.forEach(b => b.innerHTML = '<span>⛶</span><span class="hidden sm:inline">Toàn màn hình</span>');
     }
   };
 
@@ -870,7 +828,7 @@
     if (!document.fullscreenElement) {
       isFullscreenActive = false;
       if (wrapper) wrapper.classList.remove('fullscreen-reader-active');
-      toggleBtns.forEach(b => b.innerHTML = '<span>⛶</span> <span>Toàn màn hình</span>');
+      toggleBtns.forEach(b => b.innerHTML = '<span>⛶</span><span class="hidden sm:inline">Toàn màn hình</span>');
     }
   });
 
@@ -1749,6 +1707,9 @@
           pageIdx
         };
       });
+
+      const count = document.getElementById(`chapter-count-${chap.id}`);
+      if (count) count.textContent = `${chap.pages.length} trang`;
     }
   }
 
