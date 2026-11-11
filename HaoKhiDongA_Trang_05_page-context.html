@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bối Cảnh Lịch Sử (Master Context) - Hào Khí Đông A</title>
+  <meta name="description" content="Trang gốc số 05: Bối Cảnh Lịch Sử (Master Context) - Dự án Hào Khí Đông A." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body class="bg-[#FAF7F0] text-[#1C1917] antialiased">
+  <div class="min-h-screen flex flex-col">
+    
+        <header class="sticky top-0 z-40 bg-[#FAF7F0]/95 backdrop-blur-md border-b border-[#D4A359]/30 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20 gap-4">
+          
+          <!-- Logo bên trái (không xuống hàng) -->
+          <button onclick="window.navigateTo('trang-chu')" class="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0">
+            <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs shrink-0">
+              <span class="font-heading font-black tracking-tighter">TRẦN</span>
+              <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+            </div>
+            <div class="flex flex-col shrink-0">
+              <span class="font-heading font-black text-xl sm:text-2xl text-[#8B1E1E] tracking-tight leading-none whitespace-nowrap">
+                HÀO KHÍ ĐÔNG A
+              </span>
+              <span class="text-[11px] font-medium text-[#785928] tracking-widest uppercase mt-1 whitespace-nowrap">
+                Lịch Sử Nhà Trần Qua Tranh Vẽ
+              </span>
+            </div>
+          </button>
+
+          <!-- Menu điều hướng chính -->
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <button
+              onclick="window.navigateTo('trang-chu')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Trang chủ
+            </button>
+            <button
+              onclick="window.navigateTo('doc-truyen')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              📖 Đọc truyện
+            </button>
+            <button
+              onclick="window.navigateTo('nhan-vat')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Nhân vật
+            </button>
+            <button
+              onclick="window.navigateTo('su-kien')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Sự kiện
+            </button>
+            <button
+              onclick="window.navigateTo('boi-canh')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Bối cảnh
+            </button>
+            <button
+              onclick="window.navigateTo('tu-lieu')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Tư liệu sử Việt
+            </button>
+          </nav>
+
+          <!-- Nút Đố Vui -->
+          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              onclick="window.navigateTo('trac-nghiem')"
+              class="inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-md border transition-colors cursor-pointer text-[#235347] border-[#235347]/40 hover:bg-[#235347]/10 whitespace-nowrap"
+            >
+              Thử tài sử học
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Mobile Navigation bar -->
+        <div class="lg:hidden flex items-center justify-between overflow-x-auto py-2.5 border-t border-[#D4A359]/20 gap-2 no-scrollbar">
+          <button
+            onclick="window.navigateTo('trang-chu')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Trang chủ
+          </button>
+          <button
+            onclick="window.navigateTo('doc-truyen')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Đọc truyện
+          </button>
+          <button
+            onclick="window.navigateTo('nhan-vat')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Nhân vật
+          </button>
+          <button
+            onclick="window.navigateTo('su-kien')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Sự kiện
+          </button>
+          <button
+            onclick="window.navigateTo('boi-canh')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Bối cảnh
+          </button>
+          <button
+            onclick="window.navigateTo('tu-lieu')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Tư liệu sử Việt
+          </button>
+          <button
+            onclick="window.navigateTo('trac-nghiem')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#235347]"
+          >
+            Thử tài
+          </button>
+        </div>
+      </div>
+    </header>
+  
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+    <div class="space-y-10">
+      <div class="pb-6 border-b border-[#D4A359]/30">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs">
+          <span class="font-heading font-black tracking-tighter">TRẦN</span>
+          <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+        </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E]">
+            Thời đại & Xã hội Đại Việt thế kỷ XIII
+          </span>
+        </div>
+        <h1 class="font-heading font-black text-3xl sm:text-4xl text-[#1C1917]">
+          BỐI CẢNH LỊCH SỬ THỜI TRẦN
+        </h1>
+        <p class="text-xs sm:text-sm text-[#78716C] mt-1 max-w-2xl">
+          Tìm hiểu nguồn cội của hào khí Đông A, thể chế chính trị - quân sự tiến bộ và nền văn hóa đậm đà bản sắc thuần Việt.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+          <div class="lg:col-span-6 bg-[#FAF7F0] rounded-2xl border border-[#D4A359]/50 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-[#D4A359]/20 mb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E]">
+                  Chiết tự văn hóa
+                </span>
+                <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+              </div>
+
+              <h3 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917] leading-snug">
+                Nguồn gốc tên gọi "Hào Khí Đông A"
+              </h3>
+
+              <p class="text-xs sm:text-sm text-[#44403C] mt-3 leading-relaxed">
+                Họ "Trần" (陳) trong chữ Hán được cấu tạo bởi hai bộ thủ: bộ "Đông" (東) bên trái và bộ "A" (阝 - Ấp/Phụ, còn gọi là A) bên phải. Người đương thời ghép lại thành "Đông A", vừa để chỉ triều đại nhà Trần, vừa tôn vinh hào khí quật cường, tinh thần thượng võ và sự gắn kết muôn người như một làm nên kỳ tích đánh thắng quân Nguyên Mông.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#D4A359]/20">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#785928] mb-2.5">
+                Đặc trưng cốt lõi:
+              </h4>
+              <ul class="space-y-2 text-xs text-[#57534E]">
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Tinh thần tự chủ, độc lập không chịu cúi đầu trước bạo tàn</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Hòa hợp giữa Phật giáo Thiền tông Trúc Lâm và tinh thần cứu đời</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Xăm trổ hình rồng và chữ Sát Thát như biểu tượng căn cước Đại Việt</span>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        
+          <div class="lg:col-span-6 bg-[#FAF7F0] rounded-2xl border border-[#D4A359]/50 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-[#D4A359]/20 mb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E]">
+                  Thể chế quân sự
+                </span>
+                <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+              </div>
+
+              <h3 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917] leading-snug">
+                Chính sách "Ngụ Binh Ư Nông"
+              </h3>
+
+              <p class="text-xs sm:text-sm text-[#44403C] mt-3 leading-relaxed">
+                Nghĩa là "gửi binh lính vào nông nghiệp". Thời bình, quân lính được chia phiên luân phiên về quê cày ruộng sản xuất, chỉ một bộ phận thường trực túc trực kinh thành. Khi đất nước có giặc, triều đình lập tức phát lệnh điều động, hàng vạn người nông dân lại cầm vũ khí trở thành người lính thiện chiến.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#D4A359]/20">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#785928] mb-2.5">
+                Đặc trưng cốt lõi:
+              </h4>
+              <ul class="space-y-2 text-xs text-[#57534E]">
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Không tốn kém ngân khố nuôi quân thường trực khổng lồ</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Đảm bảo sản xuất nông nghiệp phát triển mùa màng no ấm</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Lực lượng dự bị động viên tinh nhuệ, gắn bó mật thiết với quê hương</span>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        
+          <div class="lg:col-span-6 bg-[#FAF7F0] rounded-2xl border border-[#D4A359]/50 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-[#D4A359]/20 mb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E]">
+                  Thể chế chính trị
+                </span>
+                <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+              </div>
+
+              <h3 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917] leading-snug">
+                Chế độ Thái Thượng Hoàng độc đáo
+              </h3>
+
+              <p class="text-xs sm:text-sm text-[#44403C] mt-3 leading-relaxed">
+                Các vị vua Trần thường nhường ngôi sớm cho con khi tuổi đời còn rất sung mãn (khoảng 40-45 tuổi) để lên làm Thái thượng hoàng. Hai cha con cùng đồng triều cai trị, Thượng hoàng dìu dắt vua trẻ làm quen với việc triều chính, vừa ngăn ngừa nội loạn tranh đoạt ngôi báu, vừa tạo sự kế thừa vững chắc.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#D4A359]/20">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#785928] mb-2.5">
+                Đặc trưng cốt lõi:
+              </h4>
+              <ul class="space-y-2 text-xs text-[#57534E]">
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Gia tộc nhà Trần đoàn kết keo sơn qua nhiều thế hệ</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Đào tạo vua trẻ trưởng thành thực tế ngay trong bình định và trị quốc</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Khi gặp quốc biến lớn, luôn có bậc tiền bối dạn dày kinh nghiệm chỉ huy</span>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        
+          <div class="lg:col-span-6 bg-[#FAF7F0] rounded-2xl border border-[#D4A359]/50 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-[#D4A359]/20 mb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E]">
+                  Di sản mỹ thuật
+                </span>
+                <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+              </div>
+
+              <h3 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917] leading-snug">
+                Nghệ thuật Gốm Hoa Nâu & Đất Nung Thời Trần
+              </h3>
+
+              <p class="text-xs sm:text-sm text-[#44403C] mt-3 leading-relaxed">
+                Khác với vẻ đài các của gốm men Lý, gốm thời Trần mang đậm tính dân dã, khỏe khoắn và phóng khoáng. Nền men gốm hoa nâu cạo nổi hoa sen, hoa cúc, chim muông và hình ảnh chiến binh Đại Việt luyện võ cưỡi ngựa. Đây là tấm gương phản chiếu chân thực tâm hồn và lối sống hào sảng thời Đông A.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#D4A359]/20">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#785928] mb-2.5">
+                Đặc trưng cốt lõi:
+              </h4>
+              <ul class="space-y-2 text-xs text-[#57534E]">
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Kỹ thuật cạo men tạo họa tiết tương phản mộc mạc</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Đề tài tạo hình thượng võ độc nhất vô nhị trong lịch sử gốm Việt Nam</span>
+                  </li>
+                
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#235347] font-bold">✓</span>
+                    <span>Kế thừa tinh hoa gốm men ngọc (celadon) và hoa lam thời đầu</span>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  
+    </main>
+    
+    <footer class="bg-[#FAF7F0] border-t border-[#D4A359]/30 pt-12 pb-8 mt-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#D4A359]/20">
+          
+          <div class="md:col-span-2 space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs">
+          <span class="font-heading font-black tracking-tighter">TRẦN</span>
+          <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+        </div>
+              <span class="font-heading font-black text-lg text-[#8B1E1E] whitespace-nowrap">
+                HÀO KHÍ ĐÔNG A
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#57534E] leading-relaxed max-w-lg">
+              Dự án giáo dục lịch sử văn hóa Việt Nam thời Trần qua truyện tranh minh họa vẽ tay và số hóa tư liệu hiện vật khảo cổ học, khơi dậy tinh thần tự hào dân tộc và lòng yêu nước cho thế hệ trẻ.
+            </p>
+            <div class="flex items-center gap-3 text-xs text-[#785928] pt-1">
+              <span>Mã nguồn thuần HTML, CSS & JavaScript</span>
+              <span>·</span>
+              <span>Không phụ thuộc framework React</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E] mb-3">
+              Chuyên mục
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-[#44403C]">
+              <li><button onclick="window.navigateTo('doc-truyen')" class="hover:text-[#8B1E1E] cursor-pointer">Đọc truyện vẽ tay (Tâm điểm)</button></li>
+              <li><button onclick="window.navigateTo('tu-lieu')" class="hover:text-[#8B1E1E] cursor-pointer">Hiện vật khảo cổ 360°</button></li>
+              <li><button onclick="window.navigateTo('nhan-vat')" class="hover:text-[#8B1E1E] cursor-pointer">Danh nhân & Tướng soái</button></li>
+              <li><button onclick="window.navigateTo('su-kien')" class="hover:text-[#8B1E1E] cursor-pointer">Biên niên sử & Chiến trận</button></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E] mb-3">
+              Figma & Tài nguyên
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-[#44403C]">
+              <li><button onclick="window.navigateTo('figma-prototype')" class="hover:text-[#8B1E1E] font-medium cursor-pointer">Bản vẽ Figma 8 Trang gốc</button></li>
+              <li><button onclick="window.navigateTo('trac-nghiem')" class="hover:text-[#235347] font-medium cursor-pointer">Thử tài sử học</button></li>
+              <li><a href="https://www.figma.com/design/EHcXHoJWoi624KdRQ5grXI/H%C3%A0o-Kh%C3%AD-%C4%90%C3%B4ng-A?node-id=2082-5231" target="_blank" rel="noreferrer" class="text-xs text-[#785928] hover:underline">Figma gốc tham chiếu ↗</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#78716C] gap-3">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+            <span>"Xã tắc hai phen chồn ngựa đá · Non sông nghìn thuở vững âu vàng"</span>
+          </div>
+          <p>© 2026 Hào Khí Đông A · Dự án văn hóa giáo dục phi lợi nhuận cho tuyenle.art@gmail.com.</p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+</body>
+</html>

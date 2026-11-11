@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phòng Giám Định 360° (Master Inspector) - Hào Khí Đông A</title>
+  <meta name="description" content="Trang gốc số 07: Phòng Giám Định 360° (Master Inspector) - Dự án Hào Khí Đông A." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body class="bg-[#FAF7F0] text-[#1C1917] antialiased">
+  <div class="min-h-screen flex flex-col">
+    
+        <header class="sticky top-0 z-40 bg-[#FAF7F0]/95 backdrop-blur-md border-b border-[#D4A359]/30 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20 gap-4">
+          
+          <!-- Logo bên trái (không xuống hàng) -->
+          <button onclick="window.navigateTo('trang-chu')" class="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0">
+            <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs shrink-0">
+              <span class="font-heading font-black tracking-tighter">TRẦN</span>
+              <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+            </div>
+            <div class="flex flex-col shrink-0">
+              <span class="font-heading font-black text-xl sm:text-2xl text-[#8B1E1E] tracking-tight leading-none whitespace-nowrap">
+                HÀO KHÍ ĐÔNG A
+              </span>
+              <span class="text-[11px] font-medium text-[#785928] tracking-widest uppercase mt-1 whitespace-nowrap">
+                Lịch Sử Nhà Trần Qua Tranh Vẽ
+              </span>
+            </div>
+          </button>
+
+          <!-- Menu điều hướng chính -->
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <button
+              onclick="window.navigateTo('trang-chu')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Trang chủ
+            </button>
+            <button
+              onclick="window.navigateTo('doc-truyen')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              📖 Đọc truyện
+            </button>
+            <button
+              onclick="window.navigateTo('nhan-vat')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Nhân vật
+            </button>
+            <button
+              onclick="window.navigateTo('su-kien')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Sự kiện
+            </button>
+            <button
+              onclick="window.navigateTo('boi-canh')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Bối cảnh
+            </button>
+            <button
+              onclick="window.navigateTo('tu-lieu')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Tư liệu sử Việt
+            </button>
+          </nav>
+
+          <!-- Nút Đố Vui -->
+          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              onclick="window.navigateTo('trac-nghiem')"
+              class="inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-md border transition-colors cursor-pointer text-[#235347] border-[#235347]/40 hover:bg-[#235347]/10 whitespace-nowrap"
+            >
+              Thử tài sử học
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Mobile Navigation bar -->
+        <div class="lg:hidden flex items-center justify-between overflow-x-auto py-2.5 border-t border-[#D4A359]/20 gap-2 no-scrollbar">
+          <button
+            onclick="window.navigateTo('trang-chu')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Trang chủ
+          </button>
+          <button
+            onclick="window.navigateTo('doc-truyen')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Đọc truyện
+          </button>
+          <button
+            onclick="window.navigateTo('nhan-vat')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Nhân vật
+          </button>
+          <button
+            onclick="window.navigateTo('su-kien')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Sự kiện
+          </button>
+          <button
+            onclick="window.navigateTo('boi-canh')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Bối cảnh
+          </button>
+          <button
+            onclick="window.navigateTo('tu-lieu')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Tư liệu sử Việt
+          </button>
+          <button
+            onclick="window.navigateTo('trac-nghiem')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#235347]"
+          >
+            Thử tài
+          </button>
+        </div>
+      </div>
+    </header>
+  
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="space-y-6">
+        <!-- Banner tiêu đề phòng giám định -->
+        <div class="p-4 bg-[#EFE3CA] border border-[#D4A359] rounded-xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-[#8B1E1E] uppercase tracking-wider">✦ Bảo Vật Quốc Gia Thời Trần · Khảo Cổ Hoàng Cung</span>
+              <span class="text-[10px] px-2 py-0.5 bg-[#8B1E1E] text-white font-bold rounded-full animate-pulse">Bí mật</span>
+            </div>
+            <h1 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917] mt-0.5">
+              Phòng Giám Định & Nghi Thức Mở Rương Bảo Vật 360°
+            </h1>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="window.triggerMysteryUnbox()" id="btn-unbox-toggle" class="px-4 py-2 bg-[#8B1E1E] hover:bg-[#701616] text-white text-xs font-bold rounded-lg transition-all shadow-md flex items-center gap-1.5 cursor-pointer">
+              <span>🎁</span>
+              <span id="btn-unbox-text">Mở Rương Bí Mật</span>
+            </button>
+            <button onclick="window.resetMysteryBox()" id="btn-reset-box" class="px-3 py-2 border border-[#D4A359] hover:bg-[#D4A359]/20 text-[#785928] text-xs font-bold rounded-lg transition-all flex items-center gap-1 cursor-pointer">
+              <span>↺</span>
+              <span>Đóng Hộp</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- SÂN KHẤU CHÍNH: KHAI MỞ HỘP QUÀ BÍ MẬT 3D -->
+        <div class="relative bg-[#151311] text-[#FAF7F0] rounded-3xl p-6 sm:p-10 border-2 border-[#D4A359]/80 shadow-2xl overflow-hidden unboxing-scene">
+          
+          <!-- Quầng sáng hiệu ứng nền viền mờ ảo -->
+          <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#8B1E1E]/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-[#D4A359]/20 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <!-- Hạt pháo hoa confetti khi bung nắp rương -->
+          <div id="confetti-container" class="absolute inset-0 pointer-events-none z-40 overflow-hidden"></div>
+
+          <!-- TRẠNG THÁI 1: HỘP QUÀ BÍ MẬT NIÊM PHONG (CLOSED MYSTERY BOX) -->
+          <div id="mystery-box-sealed" class="flex flex-col items-center justify-center py-10 sm:py-16 text-center select-none z-20 relative">
+            
+            <!-- Quầng sáng xoay phía sau hộp bí mật -->
+            <div class="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full halo-pulse bg-gradient-to-tr from-[#8B1E1E]/30 via-[#D4A359]/40 to-transparent blur-xl pointer-events-none"></div>
+
+            <!-- Rương báu 3D với nắp mở -->
+            <div onclick="window.triggerMysteryUnbox()" id="box-chest" class="mystery-box-wrapper w-64 sm:w-80 h-56 sm:h-72 relative rounded-2xl bg-gradient-to-b from-[#381111] via-[#240808] to-[#140404] border-4 border-[#D4A359] shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(212,163,89,0.3)] flex flex-col justify-between p-4 group">
+              
+              <!-- Nắp rương 3D -->
+              <div id="box-lid" class="chest-lid absolute -top-4 -left-4 -right-4 h-20 sm:h-24 bg-gradient-to-b from-[#8B1E1E] to-[#4A1010] border-3 border-[#D4A359] rounded-xl shadow-lg flex items-center justify-center z-10">
+                <span class="absolute top-1 left-2 text-[#D4A359] text-xs">◆</span>
+                <span class="absolute top-1 right-2 text-[#D4A359] text-xs">◆</span>
+                <span class="font-heading font-black text-xs sm:text-sm text-[#FAF7F0] tracking-wider uppercase border-b border-[#D4A359]/50 pb-0.5">
+                  ✦ RƯƠNG HOÀNG TRIỀU THỜI TRẦN ✦
+                </span>
+              </div>
+
+              <!-- Thân rương & ruy băng vàng -->
+              <div class="relative w-full h-full flex flex-col items-center justify-center mt-12 sm:mt-16">
+                <!-- Ruy băng chữ thập -->
+                <div class="absolute inset-y-0 w-8 ribbon-shimmer opacity-85 shadow-md"></div>
+                <div class="absolute inset-x-0 h-8 ribbon-shimmer opacity-85 shadow-md"></div>
+
+                <!-- Khóa rương / Ấn triện hoàng gia -->
+                <div class="relative z-20 w-24 sm:w-28 h-24 sm:h-28 rounded-2xl bg-gradient-to-br from-[#8B1E1E] to-[#550C0C] border-3 border-[#D4A359] shadow-2xl flex flex-col items-center justify-center group-hover:scale-105 transition-transform">
+                  <div class="animate-son-ping absolute inset-0 rounded-2xl bg-[#D4A359] opacity-40"></div>
+                  <span class="text-2xl sm:text-3xl">🐉</span>
+                  <span class="font-heading font-black text-[10px] text-[#FAF7F0] tracking-tight mt-1 uppercase">ẤN NIÊM PHONG</span>
+                  <span class="text-[8px] text-[#D4A359] font-bold">ĐÔNG A CHI BẢO</span>
+                </div>
+              </div>
+
+              <!-- Góc viền trang trí -->
+              <div class="absolute bottom-2 left-2 text-xs text-[#D4A359]/80 font-bold">⚜</div>
+              <div class="absolute bottom-2 right-2 text-xs text-[#D4A359]/80 font-bold">⚜</div>
+            </div>
+
+            <!-- Hướng dẫn & Nút kêu gọi mở hộp -->
+            <div class="mt-8 space-y-3 max-w-md">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#8B1E1E]/80 border border-[#D4A359]/60 rounded-full text-xs font-bold text-[#FAF7F0] shadow-md animate-bounce">
+                <span>✨ BẢO VẬT ĐANG ĐƯỢC NIÊM PHONG TRONG HỘP BÍ MẬT ✨</span>
+              </div>
+              <h3 class="font-heading font-black text-2xl sm:text-3xl text-[#FAF7F0] text-balance">
+                Chạm Vào Rương Để Khai Mở Cổ Vật
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-400">
+                Một bảo vật vô giá hơn 700 năm thời đại nhà Trần đang nằm ẩn mình. Hãy phá ấn niêm phong để chiêm ngưỡng vầng quang tráng lệ!
+              </p>
+              <div class="pt-2">
+                <button onclick="window.triggerMysteryUnbox()" class="px-8 py-3.5 bg-gradient-to-r from-[#8B1E1E] via-[#A82828] to-[#8B1E1E] hover:brightness-110 text-white font-heading font-black text-sm uppercase tracking-wider rounded-xl border-2 border-[#D4A359] shadow-[0_0_25px_rgba(212,163,89,0.5)] transition-all transform hover:scale-105 cursor-pointer">
+                  🎁 MỞ HỘP BÍ MẬT NGAY (SPACE) 🎁
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TRẠNG THÁI 2: BẢO VẬT ĐÃ MỞ & GIÁM ĐỊNH 360° (REVEALED ARTIFACT) -->
+          <div id="mystery-box-opened" class="hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center z-20 relative animate-fade-in">
+            
+            <!-- Cột trái: Sân khấu Cổ vật nổi 3D bay bổng và ánh hào quang -->
+            <div class="lg:col-span-7 flex flex-col items-center justify-center p-6 sm:p-10 bg-gradient-to-b from-[#221F1C] to-[#100F0E] rounded-2xl border-2 border-[#D4A359]/50 relative overflow-hidden">
+              
+              <!-- Vầng hào quang mặt trời tỏa tia sáng quay tròn -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+                <div class="w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full rotating-rays opacity-45"></div>
+              </div>
+              
+              <!-- Hiệu ứng quầng sáng vàng ở trung tâm -->
+              <div class="absolute w-80 h-80 rounded-full bg-[#D4A359]/20 blur-3xl pointer-events-none"></div>
+
+              <!-- Huy hiệu Rarity phẩm cấp bảo vật -->
+              <div class="z-20 mb-4 inline-flex items-center gap-1.5 px-3 py-1 bg-[#8B1E1E] text-white border border-[#D4A359] text-[11px] font-bold rounded-full shadow-lg">
+                <span>★★★★★</span>
+                <span class="tracking-wider uppercase">BẢO VẬT HOÀNG GIA ĐẠI VIỆT</span>
+              </div>
+
+              <!-- Khung ảnh Cổ vật nổi bật lơ lửng 3D -->
+              <div id="artifact-card-container" class="relative z-20 pop-emerge relic-levitate select-none group/relic">
+                <img 
+                  id="inspector-img" 
+                  src="images/artifact_thap_gom_hoanau_1792135273950.jpg" 
+                  alt="Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ" 
+                  class="w-full max-w-md aspect-4/3 object-cover rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_60px_rgba(212,163,89,0.7)] border-2 border-[#D4A359] transition-transform duration-500 group-hover/relic:scale-105" 
+                />
+                
+                <!-- Vòng sáng chân đế bảo vật -->
+                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-8 bg-[#D4A359]/40 rounded-[100%] blur-md"></div>
+              </div>
+
+              <!-- Chú thích bảo vật -->
+              <span id="inspector-caption" class="relative z-20 mt-6 text-xs font-bold text-[#D4A359] uppercase tracking-wider text-center max-w-md">
+                Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ · Lưu vực sông Hồng, hiện lưu giữ tại Bảo tàng Lịch sử Quốc gia
+              </span>
+
+              <!-- Bộ nút điều khiển góc nhìn 360° -->
+              <div class="relative z-20 mt-6 flex flex-wrap items-center justify-center gap-2.5 pt-4 border-t border-[#D4A359]/30">
+                <button onclick="window.rotateArtifact(-30)" class="px-3 py-1.5 bg-[#1C1917] hover:bg-[#8B1E1E] border border-[#D4A359]/50 text-xs font-semibold rounded-md transition-colors flex items-center gap-1 cursor-pointer">
+                  <span>⟲</span> <span>Quay trái 30°</span>
+                </button>
+                <button onclick="window.rotateArtifact(30)" class="px-3 py-1.5 bg-[#1C1917] hover:bg-[#8B1E1E] border border-[#D4A359]/50 text-xs font-semibold rounded-md transition-colors flex items-center gap-1 cursor-pointer">
+                  <span>⟳</span> <span>Quay phải 30°</span>
+                </button>
+                <button onclick="window.toggleArtifactZoom()" id="btn-zoom" class="px-3 py-1.5 bg-[#D4A359] hover:bg-[#b88c44] text-[#1C1917] text-xs font-bold rounded-md transition-colors flex items-center gap-1 cursor-pointer">
+                  <span>🔍</span> <span>Phóng to soi chi tiết</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Cột phải: Hồ sơ Giám định Khảo cổ & Lịch sử -->
+            <div class="lg:col-span-5 space-y-4 text-xs">
+              <div class="flex items-center justify-between pb-2 border-b border-[#D4A359]/30">
+                <h3 id="inspector-dossier-title" class="font-heading font-black text-xl text-white">
+                  Hồ Sơ Giám Định Khảo Cổ
+                </h3>
+                <span class="text-[11px] font-bold text-[#D4A359]">Số lưu trữ: #VN-TRAN-07</span>
+              </div>
+
+              <p id="inspector-desc" class="text-gray-300 leading-relaxed text-sm">
+                Thạp gốm hoa nâu thời Trần là đỉnh cao của mỹ thuật gốm Đại Việt. Thân thạp được tạo dải băng hoa sen kép ở chân đế và vai, phần thân chính chạm khắc nổi hình tượng các chiến sĩ Đại Việt mình trần, quấn khố, xăm trổ, cưỡi tuấn mã cầm giáo và trường kiếm trong khí thế hào hùng. Đây là bằng chứng khảo cổ quý giá nhất phản ánh trực quan trang phục, vũ khí và tinh thần thượng võ của quân đội nhà Trần.
+              </p>
+
+              <div id="inspector-specs" class="p-3.5 bg-black/60 rounded-xl border border-[#D4A359]/40 text-gray-300 space-y-1.5">
+                <div><strong>Niên đại:</strong> Thế kỷ XIII - XIV</div>
+                <div><strong>Chất liệu:</strong> Gốm men tro phủ oxit sắt (Hoa nâu truyền thống)</div>
+                <div><strong>Kích thước:</strong> Cao 45cm, đường kính miệng 30cm</div>
+              </div>
+
+              <!-- Hành động tương tác -->
+              <div class="pt-4 flex flex-wrap gap-2.5">
+                <button onclick="window.resetMysteryBox()" class="flex-1 px-4 py-2.5 bg-[#8B1E1E] hover:bg-[#701616] text-white font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md">
+                  <span>🎁</span> <span>Đóng lại & Khai mở hộp khác</span>
+                </button>
+                <button onclick="window.navigateTo('doc-truyen')" class="px-4 py-2.5 border border-[#D4A359] hover:bg-[#D4A359]/15 text-[#D4A359] font-bold text-xs rounded-lg transition-colors cursor-pointer">
+                  <span>Xem trong truyện vẽ tay →</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- DANH SÁCH 6 HỘP BẢO VẬT ĐỂ NGƯỜI DÙNG TỰ DO CHỌN MỞ -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-heading font-bold text-sm text-[#1C1917] uppercase tracking-wider flex items-center gap-2">
+              <span>📦</span> <span>Bộ Sưu Tập 6 Hộp Cổ Vật Bí Mật Cần Khai Quật:</span>
+            </h4>
+            <span class="text-xs text-[#785928] font-medium">* Chọn hộp bất kỳ để tiến hành nghi thức mở rương</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <button onclick="window.selectMysteryArtifact('thap-gom-hoa-nau')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>🏺</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Gốm</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Thạp Gốm Hoa Nâu</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('dau-rong-la-de')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>🐉</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Điêu khắc</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Đầu Rồng Lá Đề</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('bai-coc-bach-dang')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>🪵</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#785928] text-white rounded">Di vật</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Cọc Gỗ Sông Bạch Đằng</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('kiem-lenh-nha-tran')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>⚔️</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Binh khí</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Kiếm Lệnh & Hổ Phù</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('bat-men-ngoc-sen')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>🍵</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Gốm sứ</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Bát Gốm Men Ngọc Sen</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('an-mon-ha-tham-su')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>🧧</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Ấn tín</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Ấn Môn Hạ Thẩm Sự</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    
+    </main>
+    
+    <footer class="bg-[#FAF7F0] border-t border-[#D4A359]/30 pt-12 pb-8 mt-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#D4A359]/20">
+          
+          <div class="md:col-span-2 space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs">
+          <span class="font-heading font-black tracking-tighter">TRẦN</span>
+          <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+        </div>
+              <span class="font-heading font-black text-lg text-[#8B1E1E] whitespace-nowrap">
+                HÀO KHÍ ĐÔNG A
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#57534E] leading-relaxed max-w-lg">
+              Dự án giáo dục lịch sử văn hóa Việt Nam thời Trần qua truyện tranh minh họa vẽ tay và số hóa tư liệu hiện vật khảo cổ học, khơi dậy tinh thần tự hào dân tộc và lòng yêu nước cho thế hệ trẻ.
+            </p>
+            <div class="flex items-center gap-3 text-xs text-[#785928] pt-1">
+              <span>Mã nguồn thuần HTML, CSS & JavaScript</span>
+              <span>·</span>
+              <span>Không phụ thuộc framework React</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E] mb-3">
+              Chuyên mục
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-[#44403C]">
+              <li><button onclick="window.navigateTo('doc-truyen')" class="hover:text-[#8B1E1E] cursor-pointer">Đọc truyện vẽ tay (Tâm điểm)</button></li>
+              <li><button onclick="window.navigateTo('tu-lieu')" class="hover:text-[#8B1E1E] cursor-pointer">Hiện vật khảo cổ 360°</button></li>
+              <li><button onclick="window.navigateTo('nhan-vat')" class="hover:text-[#8B1E1E] cursor-pointer">Danh nhân & Tướng soái</button></li>
+              <li><button onclick="window.navigateTo('su-kien')" class="hover:text-[#8B1E1E] cursor-pointer">Biên niên sử & Chiến trận</button></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E] mb-3">
+              Figma & Tài nguyên
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-[#44403C]">
+              <li><button onclick="window.navigateTo('figma-prototype')" class="hover:text-[#8B1E1E] font-medium cursor-pointer">Bản vẽ Figma 8 Trang gốc</button></li>
+              <li><button onclick="window.navigateTo('trac-nghiem')" class="hover:text-[#235347] font-medium cursor-pointer">Thử tài sử học</button></li>
+              <li><a href="https://www.figma.com/design/EHcXHoJWoi624KdRQ5grXI/H%C3%A0o-Kh%C3%AD-%C4%90%C3%B4ng-A?node-id=2082-5231" target="_blank" rel="noreferrer" class="text-xs text-[#785928] hover:underline">Figma gốc tham chiếu ↗</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#78716C] gap-3">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+            <span>"Xã tắc hai phen chồn ngựa đá · Non sông nghìn thuở vững âu vàng"</span>
+          </div>
+          <p>© 2026 Hào Khí Đông A · Dự án văn hóa giáo dục phi lợi nhuận cho tuyenle.art@gmail.com.</p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+</body>
+</html>

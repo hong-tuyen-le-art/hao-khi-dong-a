@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sự Kiện & Chiến Trận (Master Timeline) - Hào Khí Đông A</title>
+  <meta name="description" content="Trang gốc số 04: Sự Kiện & Chiến Trận (Master Timeline) - Dự án Hào Khí Đông A." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body class="bg-[#FAF7F0] text-[#1C1917] antialiased">
+  <div class="min-h-screen flex flex-col">
+    
+        <header class="sticky top-0 z-40 bg-[#FAF7F0]/95 backdrop-blur-md border-b border-[#D4A359]/30 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20 gap-4">
+          
+          <!-- Logo bên trái (không xuống hàng) -->
+          <button onclick="window.navigateTo('trang-chu')" class="flex items-center gap-3 text-left group focus:outline-none cursor-pointer shrink-0">
+            <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs shrink-0">
+              <span class="font-heading font-black tracking-tighter">TRẦN</span>
+              <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+            </div>
+            <div class="flex flex-col shrink-0">
+              <span class="font-heading font-black text-xl sm:text-2xl text-[#8B1E1E] tracking-tight leading-none whitespace-nowrap">
+                HÀO KHÍ ĐÔNG A
+              </span>
+              <span class="text-[11px] font-medium text-[#785928] tracking-widest uppercase mt-1 whitespace-nowrap">
+                Lịch Sử Nhà Trần Qua Tranh Vẽ
+              </span>
+            </div>
+          </button>
+
+          <!-- Menu điều hướng chính -->
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <button
+              onclick="window.navigateTo('trang-chu')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Trang chủ
+            </button>
+            <button
+              onclick="window.navigateTo('doc-truyen')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              📖 Đọc truyện
+            </button>
+            <button
+              onclick="window.navigateTo('nhan-vat')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Nhân vật
+            </button>
+            <button
+              onclick="window.navigateTo('su-kien')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Sự kiện
+            </button>
+            <button
+              onclick="window.navigateTo('boi-canh')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Bối cảnh
+            </button>
+            <button
+              onclick="window.navigateTo('tu-lieu')"
+              class="relative px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all rounded-md cursor-pointer text-[#44403C] hover:text-[#8B1E1E]"
+            >
+              Tư liệu sử Việt
+            </button>
+          </nav>
+
+          <!-- Nút Đố Vui -->
+          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              onclick="window.navigateTo('trac-nghiem')"
+              class="inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-md border transition-colors cursor-pointer text-[#235347] border-[#235347]/40 hover:bg-[#235347]/10 whitespace-nowrap"
+            >
+              Thử tài sử học
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Mobile Navigation bar -->
+        <div class="lg:hidden flex items-center justify-between overflow-x-auto py-2.5 border-t border-[#D4A359]/20 gap-2 no-scrollbar">
+          <button
+            onclick="window.navigateTo('trang-chu')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Trang chủ
+          </button>
+          <button
+            onclick="window.navigateTo('doc-truyen')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Đọc truyện
+          </button>
+          <button
+            onclick="window.navigateTo('nhan-vat')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Nhân vật
+          </button>
+          <button
+            onclick="window.navigateTo('su-kien')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Sự kiện
+          </button>
+          <button
+            onclick="window.navigateTo('boi-canh')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Bối cảnh
+          </button>
+          <button
+            onclick="window.navigateTo('tu-lieu')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#44403C]"
+          >
+            Tư liệu sử Việt
+          </button>
+          <button
+            onclick="window.navigateTo('trac-nghiem')"
+            class="text-xs font-medium px-2.5 py-1 whitespace-nowrap rounded text-[#235347]"
+          >
+            Thử tài
+          </button>
+        </div>
+      </div>
+    </header>
+  
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+    <div class="space-y-10">
+      <div class="pb-6 border-b border-[#D4A359]/30">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs">
+          <span class="font-heading font-black tracking-tighter">TRẦN</span>
+          <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+        </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E]">Biên niên sử hào hùng</span>
+        </div>
+        <h1 class="font-heading font-black text-3xl sm:text-4xl text-[#1C1917]">
+          SỰ KIỆN & CHIẾN TRẬN THỜI TRẦN
+        </h1>
+        <p class="text-xs sm:text-sm text-[#78716C] mt-1 max-w-2xl">
+          Hành trình ba lần đại thắng quân Nguyên Mông (1258, 1285, 1288) và những dấu mốc lịch sử bất tử khắc ghi trí tuệ quân sự Việt Nam.
+        </p>
+      </div>
+
+      <!-- Timeline ngang -->
+      <div class="flex items-center gap-3 overflow-x-auto pb-4 no-scrollbar">
+        
+          <button
+            onclick="window.selectEvent('khang-chien-1258')"
+            class="flex flex-col text-left p-3.5 rounded-xl border min-w-[200px] sm:min-w-[240px] transition-all cursor-pointer bg-[#8B1E1E] text-white border-[#8B1E1E] shadow-md scale-[1.02]"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-base font-heading font-black text-[#FAF7F0]">
+                Năm 1258
+              </span>
+              <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-white/20 text-white">
+                Chiến sự
+              </span>
+            </div>
+            <span class="text-xs font-bold mt-1.5 line-clamp-2 text-white">
+              Kháng chiến chống Mông Cổ lần I (Đông Bộ Đầu)
+            </span>
+          </button>
+        
+          <button
+            onclick="window.selectEvent('hoi-nghi-binh-than-1282')"
+            class="flex flex-col text-left p-3.5 rounded-xl border min-w-[200px] sm:min-w-[240px] transition-all cursor-pointer bg-[#FAF7F0] text-[#1C1917] border-[#D4A359]/40 hover:border-[#8B1E1E]"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-base font-heading font-black text-[#8B1E1E]">
+                Năm 1282
+              </span>
+              <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-[#D4A359]/20 text-[#785928]">
+                Chiến sự
+              </span>
+            </div>
+            <span class="text-xs font-bold mt-1.5 line-clamp-2 text-[#44403C]">
+              Hội nghị quân sự Bình Than
+            </span>
+          </button>
+        
+          <button
+            onclick="window.selectEvent('hoi-nghi-dien-hong-1284')"
+            class="flex flex-col text-left p-3.5 rounded-xl border min-w-[200px] sm:min-w-[240px] transition-all cursor-pointer bg-[#FAF7F0] text-[#1C1917] border-[#D4A359]/40 hover:border-[#8B1E1E]"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-base font-heading font-black text-[#8B1E1E]">
+                Năm 1284
+              </span>
+              <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-[#D4A359]/20 text-[#785928]">
+                Chiến sự
+              </span>
+            </div>
+            <span class="text-xs font-bold mt-1.5 line-clamp-2 text-[#44403C]">
+              Hội nghị Diên Hồng & Lời thề Sát Thát
+            </span>
+          </button>
+        
+          <button
+            onclick="window.selectEvent('khang-chien-1285')"
+            class="flex flex-col text-left p-3.5 rounded-xl border min-w-[200px] sm:min-w-[240px] transition-all cursor-pointer bg-[#FAF7F0] text-[#1C1917] border-[#D4A359]/40 hover:border-[#8B1E1E]"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-base font-heading font-black text-[#8B1E1E]">
+                Năm 1285
+              </span>
+              <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-[#D4A359]/20 text-[#785928]">
+                Chiến sự
+              </span>
+            </div>
+            <span class="text-xs font-bold mt-1.5 line-clamp-2 text-[#44403C]">
+              Đại chiến Tây Kết, Hàm Tử, Chương Dương & Giải phóng Thăng Long
+            </span>
+          </button>
+        
+          <button
+            onclick="window.selectEvent('dai-thang-bach-dang-1288')"
+            class="flex flex-col text-left p-3.5 rounded-xl border min-w-[200px] sm:min-w-[240px] transition-all cursor-pointer bg-[#FAF7F0] text-[#1C1917] border-[#D4A359]/40 hover:border-[#8B1E1E]"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-base font-heading font-black text-[#8B1E1E]">
+                Năm 1288
+              </span>
+              <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-[#D4A359]/20 text-[#785928]">
+                Chiến sự
+              </span>
+            </div>
+            <span class="text-xs font-bold mt-1.5 line-clamp-2 text-[#44403C]">
+              Đại thắng Sông Bạch Đằng 1288
+            </span>
+          </button>
+        
+      </div>
+
+      <!-- Khối chi tiết 8 cột / 4 cột -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-8 bg-[#FAF7F0] rounded-2xl border border-[#D4A359]/50 p-6 sm:p-8 space-y-6 shadow-xs">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-[#8B1E1E] mb-2">
+              <span>Năm 1258</span>
+              <span>·</span>
+              <span class="text-[#235347]">Bình Lệ Nguyên, Thăng Long, Đông Bộ Đầu</span>
+            </div>
+
+            <h2 class="font-heading font-black text-2xl sm:text-3xl text-[#1C1917]">
+              Kháng chiến chống Mông Cổ lần I (Đông Bộ Đầu)
+            </h2>
+
+            <div class="mt-3 p-3 bg-[#F2EBD9] rounded-lg border-l-3 border-[#8B1E1E]">
+              <span class="text-xs font-bold text-[#8B1E1E] uppercase tracking-wider block mb-0.5">
+                Ý nghĩa lịch sử cốt lõi:
+              </span>
+              <p class="text-xs sm:text-sm font-semibold text-[#1C1917]">
+                Đập tan huyền thoại bách chiến bách thắng của vó ngựa kỵ binh Mông Cổ khắp Á - Âu.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#785928]">
+              Diễn biến chiến sự
+            </h4>
+            <p class="text-xs sm:text-sm text-[#44403C] leading-relaxed">
+              Tướng giặc Ngột Lương Hợp Thai dẫn quân tràn vào biên giới. Vua tôi nhà Trần chủ động rút khỏi kinh thành thực hiện chiến thuật "Vườn không nhà trống", dồn quân giặc vào cảnh thiếu lương thực và dịch bệnh. Khi giặc suy kiệt, quân Trần bất ngờ phản công ở Đông Bộ Đầu, đánh đuổi giặc tháo chạy tan tác.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#785928] mb-2">
+              Nhân vật then chốt
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              
+                <span class="text-xs font-semibold text-[#8B1E1E] bg-[#D4A359]/20 px-3 py-1 rounded-md">
+                  Trần Thái Tông
+                </span>
+              
+                <span class="text-xs font-semibold text-[#8B1E1E] bg-[#D4A359]/20 px-3 py-1 rounded-md">
+                  Trần Thủ Độ
+                </span>
+              
+                <span class="text-xs font-semibold text-[#8B1E1E] bg-[#D4A359]/20 px-3 py-1 rounded-md">
+                  Lê Phụ Trần
+                </span>
+              
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-[#D4A359]/30 flex items-center justify-between">
+            <span class="text-xs text-[#78716C]">
+              Đã được chuyển thể thành truyện tranh vẽ tay
+            </span>
+            <button
+              onclick="window.openChapter('chap-1')"
+              class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-[#8B1E1E] hover:bg-[#721818] rounded-md transition-colors cursor-pointer"
+            >
+              <span>Xem hồi truyện liên quan</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 space-y-6">
+          <div class="bg-[#FAF7F0] border-2 border-[#235347]/50 rounded-2xl p-6 shadow-xs">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-[#235347] pb-3 border-b border-[#235347]/20">
+              Nghệ thuật quân sự Đại Việt
+            </h3>
+            <p class="mt-4 text-xs sm:text-sm text-[#1C1917] font-semibold leading-relaxed">
+              Rút lui chiến lược, bảo toàn lực lượng, dùng thời gian và địa thế triệt tiêu ưu thế kỵ binh giặc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    </main>
+    
+    <footer class="bg-[#FAF7F0] border-t border-[#D4A359]/30 pt-12 pb-8 mt-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#D4A359]/20">
+          
+          <div class="md:col-span-2 space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="relative inline-flex items-center justify-center border-2 border-[#8B1E1E] bg-[#FAF7F0] text-[#8B1E1E] font-bold text-xs select-none w-8 h-8 rounded-xs">
+          <span class="font-heading font-black tracking-tighter">TRẦN</span>
+          <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
+        </div>
+              <span class="font-heading font-black text-lg text-[#8B1E1E] whitespace-nowrap">
+                HÀO KHÍ ĐÔNG A
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#57534E] leading-relaxed max-w-lg">
+              Dự án giáo dục lịch sử văn hóa Việt Nam thời Trần qua truyện tranh minh họa vẽ tay và số hóa tư liệu hiện vật khảo cổ học, khơi dậy tinh thần tự hào dân tộc và lòng yêu nước cho thế hệ trẻ.
+            </p>
+            <div class="flex items-center gap-3 text-xs text-[#785928] pt-1">
+              <span>Mã nguồn thuần HTML, CSS & JavaScript</span>
+              <span>·</span>
+              <span>Không phụ thuộc framework React</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E] mb-3">
+              Chuyên mục
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-[#44403C]">
+              <li><button onclick="window.navigateTo('doc-truyen')" class="hover:text-[#8B1E1E] cursor-pointer">Đọc truyện vẽ tay (Tâm điểm)</button></li>
+              <li><button onclick="window.navigateTo('tu-lieu')" class="hover:text-[#8B1E1E] cursor-pointer">Hiện vật khảo cổ 360°</button></li>
+              <li><button onclick="window.navigateTo('nhan-vat')" class="hover:text-[#8B1E1E] cursor-pointer">Danh nhân & Tướng soái</button></li>
+              <li><button onclick="window.navigateTo('su-kien')" class="hover:text-[#8B1E1E] cursor-pointer">Biên niên sử & Chiến trận</button></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-[#8B1E1E] mb-3">
+              Figma & Tài nguyên
+            </h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-[#44403C]">
+              <li><button onclick="window.navigateTo('figma-prototype')" class="hover:text-[#8B1E1E] font-medium cursor-pointer">Bản vẽ Figma 8 Trang gốc</button></li>
+              <li><button onclick="window.navigateTo('trac-nghiem')" class="hover:text-[#235347] font-medium cursor-pointer">Thử tài sử học</button></li>
+              <li><a href="https://www.figma.com/design/EHcXHoJWoi624KdRQ5grXI/H%C3%A0o-Kh%C3%AD-%C4%90%C3%B4ng-A?node-id=2082-5231" target="_blank" rel="noreferrer" class="text-xs text-[#785928] hover:underline">Figma gốc tham chiếu ↗</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#78716C] gap-3">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 64 64" fill="none" class="w-4 h-4 inline-block text-[#D4A359]" aria-hidden="true"><path d="M32 6C32 6 22 20 22 34C22 44 26 50 32 54C38 50 42 44 42 34C42 20 32 6 32 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 34C16 26 8 30 8 38C8 46 15 52 24 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 34C48 26 56 30 56 38C56 46 49 52 40 53" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="56" r="3" fill="currentColor"/></svg>
+            <span>"Xã tắc hai phen chồn ngựa đá · Non sông nghìn thuở vững âu vàng"</span>
+          </div>
+          <p>© 2026 Hào Khí Đông A · Dự án văn hóa giáo dục phi lợi nhuận cho tuyenle.art@gmail.com.</p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+</body>
+</html>
