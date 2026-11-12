@@ -13,10 +13,12 @@
   const isPrefixed = currentPath.includes('HaoKhiDongA_Trang_') || !currentPath.includes('.html') ? true : true;
 
   const PAGE_ROUTES = {
-    'trang-chu': 'HaoKhiDongA_Trang_01_page-home.html',
-    'home': 'HaoKhiDongA_Trang_01_page-home.html',
+    'trang-chu': 'index.html',
+    'home': 'index.html',
     'doc-truyen': 'HaoKhiDongA_Trang_02_page-reader.html',
     'reader': 'HaoKhiDongA_Trang_02_page-reader.html',
+    'danh-sach-tap': 'HaoKhiDongA_Trang_10_page-episodes.html',
+    'episodes': 'HaoKhiDongA_Trang_10_page-episodes.html',
     'nhan-vat': 'HaoKhiDongA_Trang_03_page-characters.html',
     'characters': 'HaoKhiDongA_Trang_03_page-characters.html',
     'su-kien': 'HaoKhiDongA_Trang_04_page-events.html',
@@ -29,6 +31,8 @@
     'inspector': 'HaoKhiDongA_Trang_07_page-inspector.html',
     'trac-nghiem': 'HaoKhiDongA_Trang_08_page-quiz.html',
     'quiz': 'HaoKhiDongA_Trang_08_page-quiz.html',
+    'gioi-thieu': 'HaoKhiDongA_Trang_09_page-about.html',
+    'about': 'HaoKhiDongA_Trang_09_page-about.html',
     'figma-prototype': 'figma-prototype'
   };
 
@@ -108,6 +112,75 @@
     const modal = document.getElementById('figma-prototype-modal');
     if (modal) modal.classList.add('hidden');
   };
+
+  function applySiteShell(pageName) {
+    document.body.classList.add('site-v2');
+
+    const activeRoute = pageName.includes('reader') ? 'doc-truyen'
+      : pageName.includes('characters') ? 'nhan-vat'
+      : pageName.includes('events') ? 'su-kien'
+      : pageName.includes('artifacts') || pageName.includes('inspector') ? 'tu-lieu'
+      : pageName.includes('about') ? 'gioi-thieu'
+      : pageName.includes('episodes') ? 'danh-sach-tap'
+      : 'trang-chu';
+
+    const navItems = [
+      ['trang-chu', 'Trang chủ'],
+      ['danh-sach-tap', 'Danh sách tập'],
+      ['nhan-vat', 'Nhân vật'],
+      ['su-kien', 'Sự kiện'],
+      ['tu-lieu', 'Tư liệu'],
+      ['gioi-thieu', 'Giới thiệu']
+    ];
+
+    const header = document.querySelector('header');
+    if (header) {
+      header.className = 'site-header';
+      header.innerHTML = `
+        <div class="site-header__inner">
+          <button class="site-brand" onclick="window.navigateTo('trang-chu')" aria-label="Về trang chủ">
+            <svg class="site-brand__cloud" viewBox="0 0 92 48" aria-hidden="true"><path d="M8 35c-7-8 1-18 11-15C22 7 42 5 49 18c9-10 26-3 23 9 16-2 19 15 5 17H16C5 44 1 40 8 35Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M28 29c5-6 14-4 16 2 3-4 10-4 13 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            <span><b>Hào Khí</b><strong>Đông A</strong></span>
+          </button>
+          <nav class="site-nav" aria-label="Điều hướng chính">
+            ${navItems.map(([route, label]) => `<button class="${route === activeRoute ? 'is-active' : ''}" onclick="window.navigateTo('${route}')">${label}</button>`).join('')}
+          </nav>
+          <button class="site-read-cta" onclick="window.navigateTo('doc-truyen')"><span>Đọc truyện</span><b>→</b></button>
+          <button class="site-menu-toggle" onclick="document.body.classList.toggle('site-menu-open')" aria-label="Mở menu"><span></span><span></span><span></span></button>
+        </div>
+      `;
+    }
+
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.className = 'site-footer';
+      footer.innerHTML = `
+        <div class="site-footer__clouds cloud-divider" aria-hidden="true"></div>
+        <div class="site-footer__inner">
+          <div><strong>HÀO KHÍ ĐÔNG A</strong><span>Truyện tranh lịch sử Việt Nam</span></div>
+          <nav aria-label="Liên kết cuối trang">
+            <button onclick="window.navigateTo('doc-truyen')">Đọc truyện</button>
+            <button onclick="window.navigateTo('boi-canh')">Bối cảnh</button>
+            <button onclick="window.navigateTo('trac-nghiem')">Thử tài</button>
+          </nav>
+          <p>© 2026 · Hào khí nhà Trần qua nét vẽ</p>
+        </div>
+      `;
+    }
+
+    document.querySelector('.site-mobile-nav')?.remove();
+    const mobileNav = document.createElement('nav');
+    mobileNav.className = 'site-mobile-nav';
+    mobileNav.setAttribute('aria-label', 'Điều hướng di động');
+    mobileNav.innerHTML = `
+      <button onclick="window.navigateTo('trang-chu')"><span>⌂</span>Trang chủ</button>
+      <button onclick="window.navigateTo('danh-sach-tap')"><span>▤</span>Các tập</button>
+      <button class="site-mobile-nav__read" onclick="window.navigateTo('doc-truyen')"><span>▱</span>Đọc truyện</button>
+      <button onclick="window.navigateTo('nhan-vat')"><span>♙</span>Nhân vật</button>
+      <button onclick="window.navigateTo('tu-lieu')"><span>▥</span>Tư liệu</button>
+    `;
+    document.body.appendChild(mobileNav);
+  }
 
   // --- 3. ĐỌC TRUYỆN TRANH CUỘN DỌC PHONG CÁCH HÀN QUỐC (PAGE 02 - KOREAN WEBTOON CONTINUOUS SCROLL READER) ---
   const COMIC_CHAPTERS = {
@@ -1716,6 +1789,7 @@
   // --- 8. HIGHLIGHT ACTIVE MENU HEADER & INIT ---
   document.addEventListener('DOMContentLoaded', function () {
     const pageName = window.location.pathname.split('/').pop() || '';
+    applySiteShell(pageName);
 
     const menuMap = [
       { pattern: 'page-home', navText: 'Trang chủ' },
