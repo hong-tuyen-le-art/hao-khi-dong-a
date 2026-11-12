@@ -187,7 +187,7 @@
     'chap-1': {
       id: 'chap-1',
       chapterNum: 1,
-      title: 'Hồi 1: Bình Than Dậy Sóng - Bóp Nát Quả Cam Sành',
+      title: 'Hồi 1: Hội nghị Diên Hồng - Bình Than dậy sóng',
       subtitle: 'Ý chí thiếu niên & Hội nghị bàn kế giữ nước năm 1282',
       epoch: 'Tháng 10 năm 1282 · Bến Bình Than (Hải Dương)',
       summary: 'Đứng trước họa xâm lăng của 50 vạn quân Nguyên Mông hung hãn, vua tôi nhà Trần mở đại hội nghị quân sự tại bến Bình Than. Hoài Văn Hầu Trần Quốc Toản vì còn nhỏ tuổi không được vào dự bàn, uất ức bóp nát quả cam sành vua ban, tự chiêu mộ hơn ngàn gia binh thêu cờ sáu chữ vàng xung trận lập chiến công hiển hách.',
@@ -253,7 +253,7 @@
     'chap-2': {
       id: 'chap-2',
       chapterNum: 2,
-      title: 'Hồi 2: Hào Khí Diên Hồng - Muôn Người Cùng Hô Đánh',
+      title: 'Hồi 2: Thăng Long thất thủ - Khí tiết Trần Bình Trọng',
       subtitle: 'Ý chí muôn dân muôn người như một trước thềm đại chiến năm 1284',
       epoch: 'Tháng Chạp năm 1284 · Thềm Điện Diên Hồng (Thăng Long)',
       summary: 'Đầu năm 1285, 50 vạn quân Nguyên Mông do Thoát Hoan chỉ huy ồ ạt tràn vào biên giới. Thượng hoàng Trần Thánh Tông triệu tập hội nghị Diên Hồng hỏi ý kiến các bô lão: Nên hòa hay nên đánh? Hàng triệu tiếng hô vang dậy đất trời: "ĐÁNH!". Tiết chế Trần Quốc Tuấn viết Hịch Tướng Sĩ, toàn quân xăm chữ "Sát Thát" thề quyết tử giữ gìn từng tấc đất quê hương.',
