@@ -954,7 +954,7 @@ html {
 }
 
 .webtoon-strip-section + .webtoon-strip-section {
-  margin-top: 300px !important;
+  margin-top: 100px !important;
 }
 
 .webtoon-dark-mode .webtoon-chapter-strip,
