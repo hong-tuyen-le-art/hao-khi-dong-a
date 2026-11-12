@@ -1,4 +1,6 @@
-/* ==========================================================================
+@charset "UTF-8";
+
+/* ========================================================================== 
    HÀO KHÍ ĐÔNG A - CSS DÙNG CHUNG (SHARED STYLESHEET)
    Dự án giáo dục lịch sử văn hóa Việt Nam thời Trần qua truyện tranh & hiện vật
    ========================================================================== */
@@ -1082,8 +1084,6 @@ html {
   border-left-color: #D4A359 !important;
 }
 
-@charset "UTF-8";
-
 /* ========================================================================== 
    SITE V2 · HISTORICAL COMIC EXPERIENCE
    ========================================================================== */
@@ -1353,7 +1353,7 @@ html {
 .story-feature p { color: #6c5d4e; line-height: 1.75; }
 
 .episodes-hero { position: relative; min-height: 310px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; background: #efe1c6; text-align: center; }
-.episodes-hero::before { content: ''; position: absolute; inset: 0; opacity: .1; background: center/cover url('../images/tap-3/01.jpg'); }
+.episodes-hero::before { content: ''; position: absolute; inset: 0; opacity: .1; background: center/cover url('../images/tap-3/01.png'); }
 .episodes-hero > span { z-index: 1; color: var(--vermillion); font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
 .episodes-hero h1 { z-index: 1; margin: 8px 0; font-family: Georgia, serif; font-size: clamp(48px, 7vw, 88px); }
 .episodes-hero p { z-index: 1; margin: 0; color: #6c5d4e; }
@@ -1503,6 +1503,13 @@ html {
   .explore-grid button:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .episode-row { grid-template-columns: 54px 190px 1fr 32px; gap: 16px; }
   .episode-row img { width: 190px; }
+  .chapter-showcase,
+  .chapter-showcase--reverse { grid-template-columns: 1fr; }
+  .chapter-showcase__visual,
+  .chapter-showcase__cover { min-height: 520px; }
+  .chapter-showcase--reverse .chapter-showcase__visual,
+  .chapter-showcase--reverse .chapter-showcase__copy { order: initial; }
+  .chapter-showcase__copy { min-height: 420px; }
 }
 
 @media (max-width: 680px) {
@@ -1529,5 +1536,45 @@ html {
   .story-intro__grid { grid-template-columns: 1fr; }.story-feature img { height: 300px; }.story-feature h2 { font-size: 34px; }
   .episodes-hero { min-height: 250px; }.episodes-list { padding-top: 28px; }
   .episode-row { grid-template-columns: 1fr 34px; padding: 12px; }.episode-row__number { position: absolute; top: 18px; right: 18px; z-index: 1; color: rgba(255,255,255,.7); text-shadow: 0 1px 4px #000; }.episode-row img { grid-column: 1 / -1; width: 100%; height: 190px; }.episode-row > div:nth-of-type(2) { grid-column: 1; }.episode-row > b { grid-column: 2; grid-row: 2; }
+  .episodes-page-v2 .episodes-hero { min-height: 520px; padding: 70px 24px 105px; justify-content: flex-end; }
+  .episodes-page-v2 .episodes-hero::before { background-image: linear-gradient(0deg, rgba(42,18,13,.97) 5%, rgba(42,18,13,.5) 68%, rgba(42,18,13,.1)), url('../images/tap-2/01.jpg'); background-position: 57% center; }
+  .episodes-page-v2 .episodes-hero h1 { font-size: 62px; line-height: .96; }
+  .episodes-page-v2 .episodes-hero p { max-width: 330px; font-size: 13px; }
+  .episodes-hero__count { right: 22px; bottom: 26px; width: 72px; height: 72px; }
+  .episodes-hero__count b { font-size: 28px; }.episodes-hero__count small { display: none; }
+  .chapter-library { gap: 42px; padding-top: 38px; }
+  .chapter-showcase__visual,
+  .chapter-showcase__cover { min-height: 390px; }
+  .chapter-showcase__copy { min-height: 0; padding: 38px 26px 42px; }
+  .chapter-showcase__number { top: 20px; right: 22px; font-size: 76px; }
+  .chapter-showcase__copy h2 { font-size: 43px; line-height: 1.03; }
+  .chapter-showcase__previews { right: 16px; bottom: 16px; left: 16px; gap: 7px; }
+  .chapter-showcase__previews img { width: 78px; height: 58px; border-width: 2px; }
+  .chapter-showcase__stamp,
+  .chapter-showcase--reverse .chapter-showcase__stamp { top: 18px; right: auto; left: 18px; }
+  .chapter-showcase--reverse .chapter-showcase__previews { right: 16px; left: 16px; }
+}
+
+/* Font tiếng Việt: tránh lỗi dấu và chồng dấu ở các tiêu đề lớn. */
+.site-v2,
+.site-v2 button,
+.site-v2 input,
+.site-v2 textarea,
+.site-v2 select { font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif; }
+.site-v2 h1,
+.site-v2 h2,
+.site-v2 h3,
+.site-v2 h4,
+.site-brand b,
+.site-brand strong,
+.chapter-number,
+.chapter-showcase__number,
+.episodes-hero__count b {
+  font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+  font-synthesis: none;
+}
+.home-hero h1 { line-height: .9; letter-spacing: -.045em; }
+@media (max-width: 680px) {
+  .home-hero h1 { font-size: 60px; line-height: .98; letter-spacing: -.035em; }
 }
 
