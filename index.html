@@ -15,8 +15,11 @@
   <div class="min-h-screen flex flex-col">
     <header></header>
     <main class="home-main">
-      <section class="home-hero" aria-labelledby="home-title">
-        <img class="home-hero__art" src="images/tap-2/01.jpg" alt="Quân dân Đại Việt trong cuộc kháng chiến chống quân Nguyên">
+      <section class="home-hero home-hero--video" aria-labelledby="home-title">
+        <video id="home-hero-video" class="home-hero__art home-hero__video" autoplay muted loop playsinline preload="metadata" poster="images/bia3.jpg">
+          <source src="images/clip.mp4" type="video/mp4">
+          Trình duyệt của bạn chưa hỗ trợ phát video.
+        </video>
         <div class="home-hero__veil"></div>
         <div class="history-cloud history-cloud--one" aria-hidden="true"></div>
         <div class="history-cloud history-cloud--two" aria-hidden="true"></div>
@@ -30,6 +33,9 @@
           </div>
         </div>
         <div class="home-hero__seal" aria-hidden="true"><span>ĐÔNG</span><b>A</b></div>
+        <div class="home-hero__media-note"><span></span><div><b>Phim mở đầu</b><small>Hào khí Đông A · 1285</small></div></div>
+        <button id="home-audio-toggle" class="home-video-toggle home-audio-toggle" type="button" onclick="window.toggleHomeAudio(this)" aria-label="Bật tiếng phim mở đầu"><span>♪</span><b>Bật tiếng</b></button>
+        <button id="home-video-toggle" class="home-video-toggle" type="button" onclick="window.toggleHomeVideo(this)" aria-label="Tạm dừng phim mở đầu"><span>Ⅱ</span><b>Tạm dừng</b></button>
       </section>
 
       <div class="cloud-divider" aria-hidden="true"></div>
@@ -60,20 +66,20 @@
 
       <section class="home-episodes site-section" id="episodes">
         <div class="section-heading section-heading--split">
-          <div><span>Đọc truyện</span><h2>Ba hồi sử thi</h2></div>
+          <div><span>Đọc truyện</span><h2>Ba chương sử thi</h2></div>
           <button class="text-link" onclick="window.navigateTo('danh-sach-tap')">Danh sách đầy đủ <span>→</span></button>
         </div>
         <div class="episode-grid">
           <article class="episode-card">
-            <div class="episode-card__image"><img src="images/tap-1/comic_page_tranquoctoan_15.jpg" alt="Quân dân Đại Việt giữ vững trận tuyến"><span>Tập 1</span></div>
+            <div class="episode-card__image"><img src="images/bia1.jpg" alt="Bìa chương 1: Hội nghị Diên Hồng"><span>Chương 1</span></div>
             <div class="episode-card__body"><small>Mở đầu cuộc chiến</small><h3>Hội nghị Diên Hồng</h3><p>Giặc tràn biên ải, Đại Việt bước vào giờ phút quyết định.</p><a href="HaoKhiDongA_Trang_02_page-reader.html?chap=chap-1">Đọc ngay <span>→</span></a></div>
           </article>
           <article class="episode-card episode-card--featured">
-            <div class="episode-card__image"><img src="images/tap-2/12.png" alt="Quân Trần phản công"><span>Tập 2</span></div>
+            <div class="episode-card__image"><img src="images/bia2.jpg" alt="Bìa chương 2: Khí tiết Trần Bình Trọng"><span>Chương 2</span></div>
             <div class="episode-card__body"><small>Khí tiết Đại Việt</small><h3>Quyết chiến trên sông</h3><p>Giữ quân, chờ thời và tung đòn phản công.</p><a href="HaoKhiDongA_Trang_02_page-reader.html?chap=chap-2">Đọc ngay <span>→</span></a></div>
           </article>
           <article class="episode-card">
-            <div class="episode-card__image"><img src="images/tap-3/01.png" alt="Thủy quân trên sông Bạch Đằng"><span>Tập 3</span></div>
+            <div class="episode-card__image"><img src="images/bia3.jpg" alt="Bìa chương 3: Cuộc chiến Nguyên Mông lần hai"><span>Chương 3</span></div>
             <div class="episode-card__body"><small>Khải hoàn ca</small><h3>Chiến thắng Bạch Đằng</h3><p>Thủy triều rút xuống, trận địa cọc kết thúc mộng xâm lăng.</p><a href="HaoKhiDongA_Trang_02_page-reader.html?chap=chap-3">Đọc ngay <span>→</span></a></div>
           </article>
         </div>
@@ -91,7 +97,7 @@
 
       <section class="home-quote">
         <div class="history-cloud history-cloud--three" aria-hidden="true"></div>
-        <p>“Vua tôi đồng lòng, anh em hòa mục, cả nước góp sức.”</p>
+        <p>“Vua tôi chung lòng, anh em hòa mục, cả nước góp sức.”</p>
         <span>Hào khí Đông A · Sức mạnh từ lòng dân</span>
         <button class="ink-button" onclick="window.navigateTo('trac-nghiem')">Thử tài sử học <b>→</b></button>
       </section>

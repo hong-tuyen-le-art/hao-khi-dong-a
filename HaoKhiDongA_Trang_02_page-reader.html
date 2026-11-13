@@ -146,62 +146,59 @@
       <section class="reader-intro text-center max-w-3xl mx-auto">
         <span class="text-xs font-bold text-[#8B1E1E] uppercase tracking-[0.2em]">Đọc truyện tranh</span>
         <h1 id="chapter-main-title" class="font-heading font-black text-2xl sm:text-4xl text-[#1C1917] tracking-tight mt-2">
-          Hồi 1: Hội nghị Diên Hồng
+          chương 1: Hội nghị Diên Hồng
         </h1>
         <p id="chapter-sub-title" class="text-xs sm:text-sm text-[#78716C] mt-2">
           Ý chí thiếu niên & Hội nghị bàn kế giữ nước năm 1282
         </p>
       </section>
 
-      <section aria-label="Chọn hồi truyện" class="reader-chapter-grid">
+      <section aria-label="Chọn chương truyện" class="reader-chapter-grid">
         <button id="btn-chap-1" type="button" onclick="window.openChapter('chap-1')" class="reader-chapter-card chapter-card-active" aria-pressed="true">
-          <img src="images/tap-1/comic_page_tranquoctoan_1.jpg" alt="" aria-hidden="true">
+          <img src="images/bia1.jpg" alt="" aria-hidden="true">
           <span class="reader-chapter-card__body">
-            <span class="reader-chapter-card__eyebrow">Hồi 01 · <span id="chapter-count-chap-1">20 trang</span></span>
-            <strong>Hội nghị Diên Hồng </strong>
-            <span>Bình Than Dậy Sóng</span>
+            <span class="reader-chapter-card__eyebrow">chương 01 · <span id="chapter-count-chap-1">20 trang</span></span>
+            <strong>Hội nghị Diên Hồng</strong>
           </span>
         </button>
         <button id="btn-chap-2" type="button" onclick="window.openChapter('chap-2')" class="reader-chapter-card" aria-pressed="false">
-          <img src="images/tap-2/01.jpg" alt="" aria-hidden="true">
+          <img src="images/bia2.jpg" alt="" aria-hidden="true">
           <span class="reader-chapter-card__body">
-            <span class="reader-chapter-card__eyebrow">Hồi 02 · <span id="chapter-count-chap-2">15 trang</span></span>
-            <strong>Thăng Long thất thủ</strong>
-            <span>Khí tiết Trần Bình Trọng</span>
+            <span class="reader-chapter-card__eyebrow">chương 02 · <span id="chapter-count-chap-2">15 trang</span></span>
+            <strong>Khí tiết Trần Bình Trọng</strong>
           </span>
         </button>
         <button id="btn-chap-3" type="button" onclick="window.openChapter('chap-3')" class="reader-chapter-card" aria-pressed="false">
-          <img src="images/tap-3/01.png" alt="" aria-hidden="true">
+          <img src="images/bia3.jpg" alt="" aria-hidden="true">
           <span class="reader-chapter-card__body">
-            <span class="reader-chapter-card__eyebrow">Hồi 03 · <span id="chapter-count-chap-3">8 trang</span></span>
+            <span class="reader-chapter-card__eyebrow">chương 03 · <span id="chapter-count-chap-3">8 trang</span></span>
             <strong>Bão Lửa Bạch Đằng</strong>
-            <span>Chôn vùi thủy binh Ô Mã Nhi</span>
           </span>
         </button>
       </section>
 
       <div class="webtoon-sticky-hud reader-toolbar" aria-label="Điều khiển đọc truyện">
-        <button type="button" onclick="window.prevChapter()" class="reader-toolbar__nav" title="Về hồi trước">← <span>Hồi trước</span></button>
+        <button type="button" onclick="window.prevChapter()" class="reader-toolbar__nav" title="Về chương trước">← <span>chương trước</span></button>
         <div class="reader-toolbar__status">
-          <strong id="reader-page-indicator">Hồi 1 · Trang 1/20</strong>
+          <strong id="reader-page-indicator">chương 1 · Trang 1/20</strong>
           <span>Đã đọc <b id="webtoon-progress-text">0%</b></span>
         </div>
         <div class="reader-toolbar__actions">
           <button type="button" onclick="window.toggleWebtoonTheme()" class="btn-toggle-theme reader-toolbar__icon" title="Đổi nền đọc"><span>🎬</span><span class="hidden sm:inline">Nền tối</span></button>
           <button type="button" onclick="window.toggleFullscreenReader()" class="btn-toggle-fullscreen reader-toolbar__icon" title="Đọc toàn màn hình"><span>⛶</span><span class="hidden sm:inline">Toàn màn hình</span></button>
-          <button type="button" onclick="window.nextChapter()" class="reader-toolbar__nav reader-toolbar__nav--next"><span>Hồi sau</span> →</button>
+          <button type="button" onclick="window.nextChapter()" class="reader-toolbar__nav reader-toolbar__nav--next"><span>chương sau</span> →</button>
         </div>
       </div>
 
       <section id="webtoon-main-column" class="reader-stage">
           <div class="reader-stage__hint"><span>↓</span> Cuộn xuống để đọc</div>
 
-          <!-- CONTAINER CHỨA TẤT CẢ TRANG TRANH CUỘN DỌC CỦA HỒI -->
+          <!-- CONTAINER CHỨA TẤT CẢ TRANG TRANH CUỘN DỌC CỦA chương -->
           <div id="webtoon-strip-container" class="webtoon-width-standard w-full space-y-6 select-none">
-            <!-- Dải ảnh của hồi đang đọc được hiển thị tại đây. -->
+            <!-- Dải ảnh của chương đang đọc được hiển thị tại đây. -->
           </div>
 
-          <!-- Thêm mỗi trang bằng một thẻ <img> trong đúng hồi, theo thứ tự đọc từ trên xuống.
+          <!-- Thêm mỗi trang bằng một thẻ <img> trong đúng chương, theo thứ tự đọc từ trên xuống.
                Ví dụ: <img src="images/trang-moi.jpg" alt="Mô tả trang mới" width="359" height="1280">
                width và height là kích thước thật của ảnh. data-page-id nối ảnh với tư liệu cũ, có thể bỏ qua khi thêm trang. -->
           <template id="webtoon-pages-chap-1" data-notes-only>

@@ -1578,3 +1578,96 @@ html {
   .home-hero h1 { font-size: 60px; line-height: .98; letter-spacing: -.035em; }
 }
 
+/* Trang chủ điện ảnh: clip là điểm nhìn chính, bám sát bố cục mẫu truyện tranh. */
+.home-v2 .home-main { padding-top: 22px; }
+.home-hero--video {
+  width: min(1400px, calc(100% - 36px));
+  min-height: min(780px, calc(100vh - 122px));
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(139,36,27,.34);
+  box-shadow: 0 28px 80px rgba(64,36,18,.18);
+}
+.home-hero--video::after {
+  content: '';
+  position: absolute;
+  z-index: 4;
+  inset: 14px;
+  border: 1px solid rgba(255,232,187,.3);
+  pointer-events: none;
+}
+.home-hero--video .home-hero__video {
+  object-position: center center;
+  filter: saturate(.9) contrast(1.05) brightness(.86);
+}
+.home-hero--video .home-hero__veil {
+  background: linear-gradient(90deg, rgba(28,15,10,.93) 0%, rgba(44,24,14,.67) 38%, rgba(31,17,11,.12) 72%), linear-gradient(0deg, rgba(25,13,9,.66), transparent 44%);
+}
+.home-hero--video .home-hero__content { width: min(1200px, calc(100% - 90px)); }
+.home-hero--video h1 { font-size: clamp(76px, 9vw, 132px); }
+.home-hero__media-note {
+  position: absolute;
+  z-index: 6;
+  left: 44px;
+  bottom: 27px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff3d7;
+}
+.home-hero__media-note > span { width: 8px; height: 8px; border-radius: 50%; background: #dc4c35; box-shadow: 0 0 0 6px rgba(220,76,53,.16); animation: sonPing 1.8s ease-out infinite; }
+.home-hero__media-note div { display: flex; flex-direction: column; }
+.home-hero__media-note b { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.home-hero__media-note small { color: #d6c4a6; font-size: 9px; }
+.home-video-toggle {
+  position: absolute;
+  z-index: 7;
+  top: 28px;
+  right: 28px;
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,243,216,.55) !important;
+  background: rgba(38,20,13,.52);
+  color: #fff4dc;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+.home-video-toggle:hover { background: rgba(139,36,27,.88); }
+.home-video-toggle span { font-size: 12px; }
+.home-audio-toggle { right: 148px; }
+.home-v2 .cloud-divider { margin-top: 10px; }
+.home-v2 .episode-card { overflow: hidden; }
+.home-v2 .episode-card__image { height: auto; aspect-ratio: 1.65 / 1; background: #eadcc0; }
+.home-v2 .episode-card__image img { object-position: center; transition: transform .45s ease; }
+.home-v2 .episode-card:hover .episode-card__image img { transform: scale(1.035); }
+
+@media (max-width: 980px) {
+  .home-hero--video { width: calc(100% - 24px); min-height: 700px; }
+  .home-hero--video .home-hero__content { width: calc(100% - 56px); }
+  .home-hero__media-note { left: 28px; }
+}
+
+@media (max-width: 680px) {
+  .home-v2 .home-main { padding-top: 0; }
+  .home-hero--video { width: 100%; min-height: 700px; margin: 0; border-inline: 0; }
+  .home-hero--video::after { inset: 10px; }
+  .home-hero--video .home-hero__video { object-position: 58% center; }
+  .home-hero--video .home-hero__veil { background: linear-gradient(0deg, rgba(28,15,10,.96) 0%, rgba(28,15,10,.68) 48%, rgba(28,15,10,.12) 90%); }
+  .home-hero--video .home-hero__content { width: calc(100% - 40px); margin-bottom: 36px; }
+  .home-hero--video h1 { font-size: 59px; }
+  .home-video-toggle { top: 16px; right: 16px; width: 39px; padding: 0; justify-content: center; }
+  .home-audio-toggle { right: 63px; }
+  .home-video-toggle b { display: none; }
+  .home-hero__media-note { display: none; }
+  .home-v2 .episode-card__image { aspect-ratio: 1.76 / 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__media-note > span { animation: none; }
+}
+

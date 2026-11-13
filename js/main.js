@@ -187,13 +187,13 @@
     'chap-1': {
       id: 'chap-1',
       chapterNum: 1,
-      title: 'Hồi 1: Hội nghị Diên Hồng - Bình Than dậy sóng',
+      title: 'Chương 1: Hội nghị Diên Hồng',
       subtitle: 'Ý chí thiếu niên & Hội nghị bàn kế giữ nước năm 1282',
       epoch: 'Tháng 10 năm 1282 · Bến Bình Than (Hải Dương)',
       summary: 'Đứng trước họa xâm lăng của 50 vạn quân Nguyên Mông hung hãn, vua tôi nhà Trần mở đại hội nghị quân sự tại bến Bình Than. Hoài Văn Hầu Trần Quốc Toản vì còn nhỏ tuổi không được vào dự bàn, uất ức bóp nát quả cam sành vua ban, tự chiêu mộ hơn ngàn gia binh thêu cờ sáu chữ vàng xung trận lập chiến công hiển hách.',
       historicalNote: 'Hội nghị Bình Than năm 1282 là bước ngoặt quyết định thể hiện sự thống nhất ý chí của tầng lớp quý tộc lãnh đạo triều Trần, kết hợp cùng hào khí quật cường của thế hệ thanh niên tuổi trẻ cứu nước mà biểu tượng bất tử là Trần Quốc Toản.',
       nextChapId: 'chap-2',
-      nextChapTitle: 'Hồi 2: Hào Khí Diên Hồng - Muôn Người Cùng Hô Đánh',
+      nextChapTitle: 'Chương 2: Hào Khí Diên Hồng - Muôn Người Cùng Hô Đánh',
       artifacts: [
         { id: 'thap-gom-hoa-nau', title: 'Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ', tag: 'Gốm sứ hoàng gia', desc: 'Thế kỷ XIII - XIV · Bảo vật Quốc gia', img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg' },
         { id: 'kiem-lenh-nha-tran', title: 'Thanh Kiếm Lệnh & Hổ Phù Triều Trần', tag: 'Quân khí chỉ huy', desc: 'Thế kỷ XIII · Binh khí rèn thủ công', img: 'images/comic_page_tranquoctoan_1792135273832-.jpg' }
@@ -253,13 +253,13 @@
     'chap-2': {
       id: 'chap-2',
       chapterNum: 2,
-      title: 'Hồi 2: Thăng Long thất thủ - Khí tiết Trần Bình Trọng',
+      title: 'Chương 2: Khí tiết Trần Bình Trọng',
       subtitle: 'Ý chí muôn dân muôn người như một trước thềm đại chiến năm 1284',
       epoch: 'Tháng Chạp năm 1284 · Thềm Điện Diên Hồng (Thăng Long)',
       summary: 'Đầu năm 1285, 50 vạn quân Nguyên Mông do Thoát Hoan chỉ huy ồ ạt tràn vào biên giới. Thượng hoàng Trần Thánh Tông triệu tập hội nghị Diên Hồng hỏi ý kiến các bô lão: Nên hòa hay nên đánh? Hàng triệu tiếng hô vang dậy đất trời: "ĐÁNH!". Tiết chế Trần Quốc Tuấn viết Hịch Tướng Sĩ, toàn quân xăm chữ "Sát Thát" thề quyết tử giữ gìn từng tấc đất quê hương.',
       historicalNote: 'Hội nghị Diên Hồng là hội nghị dân chủ đầu tiên trong lịch sử Việt Nam, thể hiện chân lý sáng ngời: Sức mạnh bảo vệ tổ quốc bắt nguồn từ sự đồng lòng của muôn dân trăm họ, vua tôi đồng lòng, anh em hòa mục, cả nước góp sức.',
       nextChapId: 'chap-3',
-      nextChapTitle: 'Hồi 3: Bão Lửa Bạch Đằng - Chôn Vùi Thủy Binh Ô Mã Nhi',
+      nextChapTitle: 'Chương 3: Bão Lửa Bạch Đằng',
       artifacts: [
         { id: 'thap-gom-hoa-nau', title: 'Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ', tag: 'Bảo vật Quốc gia', desc: 'Thế kỷ XIII - XIV · Nghệ thuật chạm khắc thời Trần', img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg' },
         { id: 'dau-rong-hoang-thanh', title: 'Đầu Rồng Đất Nung Hoàng Thành Thăng Long', tag: 'Kiến trúc hoàng cung', desc: 'Thế kỷ XIII · Biểu tượng uy quyền vương triều', img: 'images/artifact_dau_rong_lade_1792135273755.jpg' }
@@ -318,7 +318,7 @@
     'chap-3': {
       id: 'chap-3',
       chapterNum: 3,
-      title: 'Hồi 3: Bão Lửa Bạch Đằng - Chôn Vùi Thủy Binh Ô Mã Nhi',
+      title: 'Chương 3: Bão Lửa Bạch Đằng',
       subtitle: 'Trận thủy chiến định mệnh kết thúc cuộc xâm lược năm 1288',
       epoch: 'Tháng 4 năm 1288 · Sông Bạch Đằng (Quảng Ninh - Hải Phòng)',
       summary: 'Mùa xuân năm 1288, cuộc xâm lược lần thứ ba của quân Nguyên bị bẻ gãy. Thoát Hoan chia quân rút chạy theo hai ngả thủy bộ. Trên dòng sông Bạch Đằng cuồn cuộn sóng gió, Hưng Đạo Vương Trần Quốc Tuấn bố trí trận địa cọc ngầm kết hợp thủy triều, nhấn chìm hơn 600 thuyền giặc, bắt sống Ô Mã Nhi, khải hoàn ca thái bình muôn thuở.',
@@ -497,7 +497,7 @@
     ` : '';
   }
 
-  // RENDER KHUNG KẾT THÚC HỒI & CHUYỂN TIẾP HỒI TIẾP THEO
+  // RENDER KHUNG KẾT THÚC Chương & CHUYỂN TIẾP Chương TIẾP THEO
   function renderChapterEndHTML(chap) {
     const nextChap = chap.nextChapId ? COMIC_CHAPTERS[chap.nextChapId] : null;
 
@@ -514,7 +514,7 @@
               onclick="window.openChapter('${nextChap.id}')"
               class="reader-chapter-end__next"
             >
-              <span>Đọc Hồi ${nextChap.chapterNum}</span><span>→</span>
+              <span>Đọc Chương ${nextChap.chapterNum}</span><span>→</span>
             </button>
           ` : `
             <button onclick="window.navigateTo('trac-nghiem')" class="reader-chapter-end__next"><span>Thử tài sử học</span><span>→</span></button>
@@ -525,7 +525,7 @@
     `;
   }
 
-  // CẬP NHẬT GIAO DIỆN HỒI HIỆN TẠI VÀ RENDER CÁC TRANG DỌC
+  // CẬP NHẬT GIAO DIỆN Chương HIỆN TẠI VÀ RENDER CÁC TRANG DỌC
   window.openChapter = function (chapterId, autoScroll = true) {
     const isReaderPage = window.location.pathname.includes('page-reader') || window.location.pathname.includes('doc-truyen');
     if (!isReaderPage) {
@@ -549,7 +549,7 @@
     const summaryBox = document.getElementById('chapter-summary-text');
     if (summaryBox) summaryBox.textContent = chap.summary;
 
-    // Cập nhật các tab nút Hồi
+    // Cập nhật các tab nút Chương
     ['chap-1', 'chap-2', 'chap-3'].forEach(ch => {
       const btn = document.getElementById(`btn-${ch}`);
       if (!btn) return;
@@ -558,7 +558,7 @@
       btn.setAttribute('aria-pressed', String(isActive));
     });
 
-    // Render toàn bộ các trang của Hồi này theo dải dọc
+    // Render toàn bộ các trang của Chương này theo dải dọc
     const stripContainer = document.getElementById('webtoon-strip-container');
     if (stripContainer) {
       const pagesHTML = chap.pages.map(p => renderPageItemHTML(p, chap)).join('');
@@ -573,13 +573,13 @@
 
     const indicator = document.getElementById('reader-page-indicator');
     if (indicator) {
-      indicator.textContent = `Hồi ${chap.chapterNum} · Trang ${chap.pages.length ? 1 : 0}/${chap.pages.length}`;
+      indicator.textContent = `Chương ${chap.chapterNum} · Trang ${chap.pages.length ? 1 : 0}/${chap.pages.length}`;
     }
 
     // Cập nhật danh sách mục lục trang ở Sidebar
     updateSidebarDirectory();
 
-    // Cập nhật danh sách cổ vật trong hồi
+    // Cập nhật danh sách cổ vật trong Chương
     updateSidebarArtifacts(chap);
 
     // Reset box soi hiện vật về trạng thái hướng dẫn
@@ -591,7 +591,7 @@
             <span class="font-heading font-black tracking-tighter">TRẦN</span>
             <div class="absolute inset-0.5 border border-[#8B1E1E]/40 pointer-events-none"></div>
           </div>
-          <p class="leading-relaxed">Nhấp điểm ✦ trên tranh hoặc trong mục Lời thoại và tư liệu của hồi để xem hồ sơ hiện vật thời Trần.</p>
+          <p class="leading-relaxed">Nhấp điểm ✦ trên tranh hoặc trong mục Lời thoại và tư liệu của Chương để xem hồ sơ hiện vật thời Trần.</p>
         </div>
       `;
     }
@@ -602,7 +602,7 @@
     }
   };
 
-  // NỐI TIẾP HỒI KẾ TIẾP XUỐNG DƯỚI (INFINITE CONTINUOUS WEBTOON SCROLL)
+  // NỐI TIẾP Chương KẾ TIẾP XUỐNG DƯỚI (INFINITE CONTINUOUS WEBTOON SCROLL)
   window.appendNextChapter = function () {
     const currentChap = COMIC_CHAPTERS[currentChapterId];
     if (!currentChap || !currentChap.nextChapId) return;
@@ -641,7 +641,7 @@
 
       stripContainer.appendChild(nextDiv);
 
-      // Cập nhật tab hồi & sidebar
+      // Cập nhật tab Chương & sidebar
       ['chap-1', 'chap-2', 'chap-3'].forEach(ch => {
         const btn = document.getElementById(`btn-${ch}`);
         if (!btn) return;
@@ -653,7 +653,7 @@
       updateSidebarDirectory();
       updateSidebarArtifacts(nextChap);
 
-      // Cuộn mượt tới đầu hồi mới được nối
+      // Cuộn mượt tới đầu Chương mới được nối
       nextDiv.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -671,7 +671,7 @@
       itemsHTML += `
         <div class="mb-3">
           <div class="text-[11px] font-bold text-[#8B1E1E] uppercase tracking-wider pb-1 border-b border-[#D4A359]/30 mb-2">
-            Hồi ${chap.chapterNum}: ${chap.title.split(':')[1] || ''}
+            Chương ${chap.chapterNum}: ${chap.title.split(':')[1] || ''}
           </div>
           <div class="space-y-1.5">
             ${chap.pages.map(p => `
@@ -692,7 +692,7 @@
     dirContainer.innerHTML = itemsHTML;
   }
 
-  // CẬP NHẬT DANH SÁCH CỔ VẬT TRONG HỒI
+  // CẬP NHẬT DANH SÁCH CỔ VẬT TRONG Chương
   function updateSidebarArtifacts(chap) {
     const listContainer = document.getElementById('chapter-artifacts-list');
     if (!listContainer || !chap.artifacts) return;
@@ -905,7 +905,7 @@
     }
   });
 
-  // HÀM HỖ TRỢ CHUYỂN HỒI KẾ TIẾP / TRƯỚC
+  // HÀM HỖ TRỢ CHUYỂN Chương KẾ TIẾP / TRƯỚC
   window.nextChapter = function () {
     const order = ['chap-1', 'chap-2', 'chap-3'];
     const idx = order.indexOf(currentChapterId);
@@ -979,7 +979,7 @@
 
       const indicator = document.getElementById('reader-page-indicator');
       if (indicator && chap) {
-        indicator.textContent = `Hồi ${chap.chapterNum} · Trang ${pIdx}/${chap.pages.length}`;
+        indicator.textContent = `Chương ${chap.chapterNum} · Trang ${pIdx}/${chap.pages.length}`;
       }
 
       // Highlight sidebar button
@@ -1758,6 +1758,34 @@
     quizScore = 0;
     answered = false;
     renderQuizQuestion();
+  };
+
+  window.toggleHomeVideo = function (button) {
+    const video = document.getElementById('home-hero-video');
+    if (!video || !button) return;
+
+    if (video.paused) {
+      const playPromise = video.play();
+      if (playPromise) playPromise.catch(() => {});
+      button.querySelector('span').textContent = 'Ⅱ';
+      button.querySelector('b').textContent = 'Tạm dừng';
+      button.setAttribute('aria-label', 'Tạm dừng phim mở đầu');
+    } else {
+      video.pause();
+      button.querySelector('span').textContent = '▶';
+      button.querySelector('b').textContent = 'Phát phim';
+      button.setAttribute('aria-label', 'Phát phim mở đầu');
+    }
+  };
+
+  window.toggleHomeAudio = function (button) {
+    const video = document.getElementById('home-hero-video');
+    if (!video || !button) return;
+
+    video.muted = !video.muted;
+    button.querySelector('span').textContent = video.muted ? '♪' : '♫';
+    button.querySelector('b').textContent = video.muted ? 'Bật tiếng' : 'Tắt tiếng';
+    button.setAttribute('aria-label', video.muted ? 'Bật tiếng phim mở đầu' : 'Tắt tiếng phim mở đầu');
   };
 
   function loadComicPages() {
