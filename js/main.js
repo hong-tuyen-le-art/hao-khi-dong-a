@@ -1183,7 +1183,7 @@
     'dai-thang-bach-dang-1288': {
       year: 'Năm 1288',
       location: 'Cửa biển sông Hàm Tử, Quảng Ninh - Hải Phòng',
-      title: 'Đại thắng Sông Hàm Tử 1288',
+      title: 'Đại thắng Sông Bạch Đằng 1288',
       core: 'Trận thủy chiến thiên tài chôn vùi vĩnh viễn dã tâm xâm lược Đại Việt của đế quốc Nguyên Mông.',
       desc: 'Quốc công Tiết chế Trần Hưng Đạo vận dụng tài tình quy luật thủy triều, cắm bãi cọc ngầm lim bịt kín lối rút lui của địch. Khi thủy triều rút, toàn bộ đoàn thuyền chiến hơn 600 chiến thuyền của Ô Mã Nhi bị xé nát, Ô Mã Nhi và Phàn Tiếp bị bắt sống.',
       heroes: ['Trần Hưng Đạo', 'Trần Khánh Dư', 'Yết Kiêu', 'Dã Tượng']
