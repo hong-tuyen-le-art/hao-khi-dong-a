@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phòng Giám Định 360° (Master Inspector) - Hào Khí Đông A</title>
+  <title>Phòng Giám Định 360° - Hào Khí Đông A</title>
   <meta name="description" content="Trang gốc số 07: Phòng Giám Định 360° (Master Inspector) - Dự án Hào Khí Đông A." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,7 +142,7 @@
         <div class="p-4 bg-[#EFE3CA] border border-[#D4A359] rounded-xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
           <div>
             <div class="flex items-center gap-2">
-              <span class="text-xs font-bold text-[#8B1E1E] uppercase tracking-wider">✦ Bảo Vật Quốc Gia Thời Trần · Khảo Cổ Hoàng Cung</span>
+              <span id="inspector-banner-tag" class="text-xs font-bold text-[#8B1E1E] uppercase tracking-wider">✦ Gốm sứ thời Trần · Hồ sơ hiện vật</span>
               <span class="text-[10px] px-2 py-0.5 bg-[#8B1E1E] text-white font-bold rounded-full animate-pulse">Bí mật</span>
             </div>
             <h1 class="font-heading font-black text-xl sm:text-2xl text-[#1C1917] mt-0.5">
@@ -150,6 +150,9 @@
             </h1>
           </div>
           <div class="flex items-center gap-2">
+            <button onclick="window.navigateTo('tu-lieu')" class="px-3 py-2 border border-[#8B1E1E]/40 hover:bg-[#8B1E1E]/10 text-[#8B1E1E] text-xs font-bold rounded-lg transition-all cursor-pointer">
+              ← Kho hiện vật
+            </button>
             <button onclick="window.triggerMysteryUnbox()" id="btn-unbox-toggle" class="px-4 py-2 bg-[#8B1E1E] hover:bg-[#701616] text-white text-xs font-bold rounded-lg transition-all shadow-md flex items-center gap-1.5 cursor-pointer">
               <span>🎁</span>
               <span id="btn-unbox-text">Mở Rương Bí Mật</span>
@@ -246,7 +249,7 @@
               <!-- Huy hiệu Rarity phẩm cấp bảo vật -->
               <div class="z-20 mb-4 inline-flex items-center gap-1.5 px-3 py-1 bg-[#8B1E1E] text-white border border-[#D4A359] text-[11px] font-bold rounded-full shadow-lg">
                 <span>★★★★★</span>
-                <span class="tracking-wider uppercase">BẢO VẬT HOÀNG GIA ĐẠI VIỆT</span>
+                <span id="inspector-tag" class="tracking-wider uppercase">GỐM SỨ THỜI TRẦN</span>
               </div>
 
               <!-- Khung ảnh Cổ vật nổi bật lơ lửng 3D -->
@@ -288,7 +291,7 @@
                 <h3 id="inspector-dossier-title" class="font-heading font-black text-xl text-white">
                   Hồ Sơ Giám Định Khảo Cổ
                 </h3>
-                <span class="text-[11px] font-bold text-[#D4A359]">Số lưu trữ: #VN-TRAN-07</span>
+                <span id="inspector-archive" class="text-[11px] font-bold text-[#D4A359]">Số lưu trữ: #VN-TRAN-GOM-01</span>
               </div>
 
               <p id="inspector-desc" class="text-gray-300 leading-relaxed text-sm">
@@ -317,62 +320,72 @@
 
         </div>
 
-        <!-- DANH SÁCH 6 HỘP BẢO VẬT ĐỂ NGƯỜI DÙNG TỰ DO CHỌN MỞ -->
+        <!-- DANH SÁCH 8 HỘP HIỆN VẬT ĐỒNG BỘ VỚI TRANG TƯ LIỆU -->
         <div class="space-y-3 pt-2">
           <div class="flex items-center justify-between">
             <h4 class="font-heading font-bold text-sm text-[#1C1917] uppercase tracking-wider flex items-center gap-2">
-              <span>📦</span> <span>Bộ Sưu Tập 6 Hộp Cổ Vật Bí Mật Cần Khai Quật:</span>
+              <span>📦</span> <span>Bộ Sưu Tập 8 Hộp Hiện Vật Cần Giám Định:</span>
             </h4>
             <span class="text-xs text-[#785928] font-medium">* Chọn hộp bất kỳ để tiến hành nghi thức mở rương</span>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            <button onclick="window.selectMysteryArtifact('thap-gom-hoa-nau')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-3">
+            <button onclick="window.selectMysteryArtifact('kiem-a-au')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
               <div class="flex items-center justify-between text-lg mb-1.5">
                 <span>🏺</span>
                 <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Gốm</span>
               </div>
-              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Thạp Gốm Hoa Nâu</span>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Kiếm Á-Âu: Tiền thân của kiếm Mông Cổ</span>
               <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
             </button>
-            <button onclick="window.selectMysteryArtifact('dau-rong-la-de')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
-              <div class="flex items-center justify-between text-lg mb-1.5">
-                <span>🐉</span>
-                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Điêu khắc</span>
-              </div>
-              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Đầu Rồng Lá Đề</span>
+            <button onclick="window.selectMysteryArtifact('am-ruou-canh-sen')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5"><span>🍶</span><span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Gốm</span></div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Ấm Rượu Cánh Sen</span>
               <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
             </button>
-            <button onclick="window.selectMysteryArtifact('bai-coc-bach-dang')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
-              <div class="flex items-center justify-between text-lg mb-1.5">
-                <span>🪵</span>
-                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#785928] text-white rounded">Di vật</span>
-              </div>
-              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Cọc Gỗ Sông Bạch Đằng</span>
+            <button onclick="window.selectMysteryArtifact('thap-men-nga-vinh-quy')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5"><span>🏺</span><span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Gốm</span></div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Thạp Men Ngà Vinh Quy</span>
               <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
             </button>
-            <button onclick="window.selectMysteryArtifact('kiem-lenh-nha-tran')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+            <button onclick="window.selectMysteryArtifact('hop-dung-cung-ong-ten')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
               <div class="flex items-center justify-between text-lg mb-1.5">
-                <span>⚔️</span>
-                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Binh khí</span>
+                <span>🏹</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Quân khí</span>
               </div>
-              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Kiếm Lệnh & Hổ Phù</span>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Hộp đựng cung và ống đựng tên</span>
               <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
             </button>
-            <button onclick="window.selectMysteryArtifact('bat-men-ngoc-sen')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+            <button onclick="window.selectMysteryArtifact('cung-lien-hop')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
               <div class="flex items-center justify-between text-lg mb-1.5">
-                <span>🍵</span>
-                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Gốm sứ</span>
+                <span>🏹</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Quân khí</span>
               </div>
-              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Bát Gốm Men Ngọc Sen</span>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Cung Liên Hợp</span>
               <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
             </button>
-            <button onclick="window.selectMysteryArtifact('an-mon-ha-tham-su')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+            <button onclick="window.selectMysteryArtifact('bao-dung-cung-mong-co')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
               <div class="flex items-center justify-between text-lg mb-1.5">
-                <span>🧧</span>
-                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Ấn tín</span>
+                <span>🏹</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Quân khí</span>
               </div>
-              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Ấn Môn Hạ Thẩm Sự</span>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Bao Đựng Cung Kiểu Mông Cổ</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('chom-mu-mong-co')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>⛑️</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#235347] text-white rounded">Quân khí</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Chỏm Mũ Mông Cổ</span>
+              <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
+            </button>
+            <button onclick="window.selectMysteryArtifact('tuoc-ruou-chim-vet')" class="p-3 rounded-xl border-2 border-[#D4A359]/40 bg-[#FAF7F0] hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all text-left flex flex-col justify-between group cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between text-lg mb-1.5">
+                <span>🦜</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.2 bg-[#8B1E1E] text-white rounded">Gốm</span>
+              </div>
+              <span class="text-xs font-bold text-[#1C1917] group-hover:text-[#8B1E1E] line-clamp-2">Tước Rượu Hình Chim Vẹt</span>
               <span class="text-[10px] text-[#785928] font-medium mt-1">Mở rương →</span>
             </button>
           </div>

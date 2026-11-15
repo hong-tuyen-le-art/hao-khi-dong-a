@@ -126,11 +126,12 @@
 
     const navItems = [
       ['trang-chu', 'Trang chủ'],
+      ['gioi-thieu', 'Giới thiệu'],
       ['danh-sach-tap', 'Danh sách tập'],
       ['nhan-vat', 'Nhân vật'],
       ['su-kien', 'Sự kiện'],
       ['tu-lieu', 'Tư liệu'],
-      ['gioi-thieu', 'Giới thiệu']
+      ['quiz', 'Thử tài']
     ];
 
     const header = document.querySelector('header');
@@ -196,7 +197,7 @@
       nextChapTitle: 'Chương 2: Hào Khí Diên Hồng - Muôn Người Cùng Hô Đánh',
       artifacts: [
         { id: 'thap-gom-hoa-nau', title: 'Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ', tag: 'Gốm sứ hoàng gia', desc: 'Thế kỷ XIII - XIV · Bảo vật Quốc gia', img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg' },
-        { id: 'kiem-lenh-nha-tran', title: 'Thanh Kiếm Lệnh & Hổ Phù Triều Trần', tag: 'Quân khí chỉ huy', desc: 'Thế kỷ XIII · Binh khí rèn thủ công', img: 'images/comic_page_tranquoctoan_1792135273832-.jpg' }
+        { id: 'bao-dung-cung-mong-co', title: 'Bao Đựng Cung Kiểu Mông Cổ', tag: 'Quân khí kỵ binh Mông Cổ', desc: 'Thế kỷ XIII · Bao da bảo quản cung khi hành quân', img: 'images/comic_page_tranquoctoan_1792135273832-.jpg' }
       ],
       pages: [
         {
@@ -207,7 +208,7 @@
           sfx: 'Gió rít bến sông... Sóng nước Lục Đầu giận dữ!',
           desc: 'Tháng 10 năm 1282, vua Trần Nhân Tông ngự thuyền rồng ra bến Bình Than họp bàn với chư vương và trăm quan. Thuyền bè san sát, cờ xí rợp trời, một bầu không khí trang nghiêm và quyết liệt bao trùm sông nước.',
           hotspots: [
-            { id: 'hs-thuyen', title: 'Thuyền rồng vua Trần', top: '24%', left: '32%', detail: 'Bến Bình Than năm 1282 - Nơi tụ họp thuyền rồng hoàng gia của vua tôi nhà Trần để định đoạt kế sách sinh tử cho xã tắc.', relicKey: 'kiem-lenh-nha-tran' },
+            { id: 'hs-thuyen', title: 'Thuyền rồng vua Trần', top: '24%', left: '32%', detail: 'Bến Bình Than năm 1282 - Nơi tụ họp thuyền rồng hoàng gia của vua tôi nhà Trần để định đoạt kế sách sinh tử cho xã tắc.', relicKey: 'bao-dung-cung-mong-co' },
             { id: 'hs-quancanh', title: 'Cờ lệnh chư vương hội tụ', top: '42%', left: '72%', detail: 'Hàng trăm chiến thuyền cùng cờ hiệu của các quý tộc tôn thất nhà Trần tề tựu, biểu thị tinh thần đồng lòng kháng chiến.', relicKey: 'thap-gom-hoa-nau' }
           ]
         },
@@ -219,7 +220,7 @@
           sfx: 'RĂNG RẮC... NƯỚC CAM TRÀO QUA KẼ TAY!',
           desc: 'Hoài Văn Hầu khi ấy mới 15 tuổi, nóng lòng xin đánh nhưng bị lính canh cản lại vì chưa đến tuổi thành niên. Đức vua thương chàng trẻ tuổi mà khẳng khái nên ban quả cam sành an ủi. Vì căm giận lũ giặc dữ và uất ức chưa được dự bàn, chàng siết chặt tay bóp nát quả cam lúc nào không hay.',
           hotspots: [
-            { id: 'hs-cam', title: 'Quả cam sành Bình Than', top: '56%', left: '49%', detail: 'Quả cam sành vỏ dày, thơm ngọt được vua Trần Nhân Tông ban tặng, trở thành biểu tượng cho ngọn lửa sục sôi nhiệt huyết của tuổi trẻ cứu nước.', relicKey: 'kiem-lenh-nha-tran' },
+            { id: 'hs-cam', title: 'Quả cam sành Bình Than', top: '56%', left: '49%', detail: 'Quả cam sành vỏ dày, thơm ngọt được vua Trần Nhân Tông ban tặng, trở thành biểu tượng cho ngọn lửa sục sôi nhiệt huyết của tuổi trẻ cứu nước.', relicKey: 'bao-dung-cung-mong-co' },
             { id: 'hs-chienbao', title: 'Chiến bào nhung phục thiếu niên', top: '75%', left: '26%', detail: 'Nhung phục của võ tướng Đại Việt thời Trần, gọn gàng cơ động thích hợp với địa hình sông nước đầm lầy.', relicKey: 'thap-gom-hoa-nau' }
           ]
         },
@@ -231,7 +232,7 @@
           sfx: 'PHẤP PHỚI... NGỌN CỜ ĐẠI NGHĨA RỰC ĐỎ GÓC TRỜI!',
           desc: 'Trở về trang ấp, Trần Quốc Toản đem hết gia sản chiêu mộ hơn một nghìn gia binh tráng đinh thân thuộc. Chàng tự tay cắt lụa đỏ may lá cờ lớn thêu sáu chữ vàng "Phá Cường Địch, Báo Hoàng Ân", ngày đêm luyện tập võ nghệ sẵn sàng diệt giặc.',
           hotspots: [
-            { id: 'hs-co-sau-chu', title: 'Lá cờ "Phá Cường Địch Báo Hoàng Ân"', top: '32%', left: '16%', detail: 'Lá cờ thêu sáu chữ vàng chấn động non sông, biểu tượng bất tử của tinh thần yêu nước quật cường tuổi trẻ Việt Nam.', relicKey: 'kiem-lenh-nha-tran' },
+            { id: 'hs-co-sau-chu', title: 'Lá cờ "Phá Cường Địch Báo Hoàng Ân"', top: '32%', left: '16%', detail: 'Lá cờ thêu sáu chữ vàng chấn động non sông, biểu tượng bất tử của tinh thần yêu nước quật cường tuổi trẻ Việt Nam.', relicKey: 'bao-dung-cung-mong-co' },
             { id: 'hs-giabinh', title: 'Đội gia binh Đại Việt', top: '78%', left: '80%', detail: 'Hơn một nghìn tráng sĩ thiện chiến, trung thành tuyệt đối, được rèn luyện cung đao kỹ càng để làm mũi nhọn đột kích.', relicKey: 'thap-gom-hoa-nau' }
           ]
         },
@@ -243,9 +244,9 @@
           sfx: 'KENG! BẦM... VÓ NGỰA THẦN TỐC XÉ NÁT CHIẾN TUYẾN!',
           desc: 'Khi quân xâm lược tràn vào, Hoài Văn Hầu dẫn đạo quân sáu chữ vàng xung trận dũng mãnh, một ngọn trường thương đâm nhào kỵ binh Mông Cổ, phá tan trận tuyến, chém tướng giặc cứu nguy cho đại quân triều đình.',
           hotspots: [
-            { id: 'hs-tuong-quan', title: 'Hoài Văn Hầu cưỡi tuấn mã đen', top: '25%', left: '68%', detail: 'Trần Quốc Toản uy phong lẫm liệt, tay cầm trường thương thép tôi rèn, cưỡi thần mã phi như gió lốc giữa làn tên mũi giáo.', relicKey: 'kiem-lenh-nha-tran' },
+            { id: 'hs-tuong-quan', title: 'Hoài Văn Hầu cưỡi tuấn mã đen', top: '25%', left: '68%', detail: 'Trần Quốc Toản uy phong lẫm liệt, tay cầm trường thương thép tôi rèn, cưỡi thần mã phi như gió lốc giữa làn tên mũi giáo.', relicKey: 'bao-dung-cung-mong-co' },
             { id: 'hs-giac-nga', title: 'Tướng giặc Nguyên ngã ngựa', top: '68%', left: '22%', detail: 'Tướng giặc trang bị giáp sắt hạng nặng Mông Cổ nhưng đại bại trước thế trận biến hóa và ngọn thương thần tốc của Hoài Văn Hầu.', relicKey: 'thap-gom-hoa-nau' },
-            { id: 'hs-khien-dong', title: 'Khiên đồng & Kiếm lệnh thời Trần', top: '82%', left: '44%', detail: 'Khiên đồng chạm khắc hoa văn sóng nước đặc trưng thời Trần và kiếm lệnh chỉ huy bằng thép tôi đa tầng sắc bén.', relicKey: 'kiem-lenh-nha-tran' }
+            { id: 'hs-khien-dong', title: 'Bao cung của kỵ binh', top: '82%', left: '44%', detail: 'Bao da bảo vệ cánh cung trong lúc hành quân, giúp binh sĩ giữ vũ khí khô ráo và sẵn sàng sử dụng.', relicKey: 'bao-dung-cung-mong-co' }
           ]
         }
       ]
@@ -259,7 +260,7 @@
       summary: 'Đầu năm 1285, 50 vạn quân Nguyên Mông do Thoát Hoan chỉ huy ồ ạt tràn vào biên giới. Thượng hoàng Trần Thánh Tông triệu tập hội nghị Diên Hồng hỏi ý kiến các bô lão: Nên hòa hay nên đánh? Hàng triệu tiếng hô vang dậy đất trời: "ĐÁNH!". Tiết chế Trần Quốc Tuấn viết Hịch Tướng Sĩ, toàn quân xăm chữ "Sát Thát" thề quyết tử giữ gìn từng tấc đất quê hương.',
       historicalNote: 'Hội nghị Diên Hồng là hội nghị dân chủ đầu tiên trong lịch sử Việt Nam, thể hiện chân lý sáng ngời: Sức mạnh bảo vệ tổ quốc bắt nguồn từ sự đồng lòng của muôn dân trăm họ, vua tôi đồng lòng, anh em hòa mục, cả nước góp sức.',
       nextChapId: 'chap-3',
-      nextChapTitle: 'Chương 3: Bão Lửa Bạch Đằng',
+      nextChapTitle: 'Chương 3: Bão Lửa Hàm Tử',
       artifacts: [
         { id: 'thap-gom-hoa-nau', title: 'Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ', tag: 'Bảo vật Quốc gia', desc: 'Thế kỷ XIII - XIV · Nghệ thuật chạm khắc thời Trần', img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg' },
         { id: 'dau-rong-hoang-thanh', title: 'Đầu Rồng Đất Nung Hoàng Thành Thăng Long', tag: 'Kiến trúc hoàng cung', desc: 'Thế kỷ XIII · Biểu tượng uy quyền vương triều', img: 'images/artifact_dau_rong_lade_1792135273755.jpg' }
@@ -318,28 +319,28 @@
     'chap-3': {
       id: 'chap-3',
       chapterNum: 3,
-      title: 'Chương 3: Bão Lửa Bạch Đằng',
+      title: 'Chương 3: Bão Lửa Hàm Tử',
       subtitle: 'Trận thủy chiến định mệnh kết thúc cuộc xâm lược năm 1288',
-      epoch: 'Tháng 4 năm 1288 · Sông Bạch Đằng (Quảng Ninh - Hải Phòng)',
-      summary: 'Mùa xuân năm 1288, cuộc xâm lược lần thứ ba của quân Nguyên bị bẻ gãy. Thoát Hoan chia quân rút chạy theo hai ngả thủy bộ. Trên dòng sông Bạch Đằng cuồn cuộn sóng gió, Hưng Đạo Vương Trần Quốc Tuấn bố trí trận địa cọc ngầm kết hợp thủy triều, nhấn chìm hơn 600 thuyền giặc, bắt sống Ô Mã Nhi, khải hoàn ca thái bình muôn thuở.',
-      historicalNote: 'Chiến thắng Bạch Đằng năm 1288 là đỉnh cao nghệ thuật quân sự Đại Việt, chôn vùi vĩnh viễn mộng xâm lăng của đế chế Mông Nguyên hùng mạnh nhất thế giới thời bấy giờ, khẳng định vị thế độc lập tự chủ ngàn năm của dân tộc.',
+      epoch: 'Tháng 4 năm 1288 · Sông Hàm Tử (Quảng Ninh - Hải Phòng)',
+      summary: 'Mùa xuân năm 1288, cuộc xâm lược lần thứ ba của quân Nguyên bị bẻ gãy. Thoát Hoan chia quân rút chạy theo hai ngả thủy bộ. Trên dòng sông Hàm Tử cuồn cuộn sóng gió, Hưng Đạo Vương Trần Quốc Tuấn bố trí trận địa cọc ngầm kết hợp thủy triều, nhấn chìm hơn 600 thuyền giặc, bắt sống Ô Mã Nhi, khải hoàn ca thái bình muôn thuở.',
+      historicalNote: 'Chiến thắng Hàm Tử năm 1288 là đỉnh cao nghệ thuật quân sự Đại Việt, chôn vùi vĩnh viễn mộng xâm lăng của đế chế Mông Nguyên hùng mạnh nhất thế giới thời bấy giờ, khẳng định vị thế độc lập tự chủ ngàn năm của dân tộc.',
       nextChapId: null,
       nextChapTitle: null,
       artifacts: [
         { id: 'dau-rong-hoang-thanh', title: 'Đầu Rồng Đất Nung Hoàng Thành Thăng Long', tag: 'Bảo vật Quốc gia', desc: 'Thế kỷ XIII · Biểu tượng hòa bình khải hoàn', img: 'images/artifact_dau_rong_lade_1792135273755.jpg' },
-        { id: 'kiem-lenh-nha-tran', title: 'Thanh Kiếm Lệnh & Hổ Phù Triều Trần', tag: 'Quân khí chỉ huy', desc: 'Thế kỷ XIII · Chiến tích Bạch Đằng oanh liệt', img: 'images/comic_page_tranquoctoan_1792135273832-.jpg' }
+        { id: 'cung-lien-hop', title: 'Cung Liên Hợp', tag: 'Quân khí kỵ binh Mông Cổ', desc: 'Thế kỷ XIII · Kết cấu gỗ, sừng và gân', img: 'images/comic_page_bachdang_1792135273305.jpg' }
       ],
       pages: [
         {
           id: 'p3-1',
-          title: 'Khung 1: Bố Trí Bãi Cọc Ngầm Dưới Đáy Sông Bạch Đằng',
+          title: 'Khung 1: Bố Trí Bãi Cọc Ngầm Dưới Đáy Sông Hàm Tử',
           speaker: 'Trần Quốc Tuấn',
           dialogue: '"Nắm chắc quy luật con nước, khi triều dâng giấu cọc sâu trong nước, khi triều rút bãi cọc nhô lên xé toạc bụng thuyền giặc!"',
           sfx: 'ÙM... ÙM... HÀNG VẠN THÂN LIM CẮM SÂU ĐÁY BÙN!',
-          desc: 'Hiểu rõ dòng chảy và quy luật thủy triều sông Bạch Đằng, Tiết chế Trần Quốc Tuấn huy động quân dân đẵn hàng vạn cây gỗ lim vót nhọn, bịt sắt cắm ngầm ở các cửa sông hiểm yếu, giăng bẫy chờ đoàn thuyền chiến của Ô Mã Nhi.',
+          desc: 'Hiểu rõ dòng chảy và quy luật thủy triều sông Hàm Tử, Tiết chế Trần Quốc Tuấn huy động quân dân đẵn hàng vạn cây gỗ lim vót nhọn, bịt sắt cắm ngầm ở các cửa sông hiểm yếu, giăng bẫy chờ đoàn thuyền chiến của Ô Mã Nhi.',
           hotspots: [
-            { id: 'hs-coc', title: 'Trận địa cọc gỗ lim Bạch Đằng', top: '75%', left: '35%', detail: 'Những thân gỗ lim cổ thụ vót nhọn, cắm nghiêng theo hướng nước xuôi, trở thành cái bẫy chết người tiêu diệt đạo thủy binh khổng lồ của giặc.', relicKey: 'kiem-lenh-nha-tran' },
-            { id: 'hs-thuytrieu', title: 'Dòng nước thủy triều Bạch Đằng', top: '50%', left: '20%', detail: 'Địa thế sông ngòi hiểm trở với mức chênh lệch triều lên xuống cực lớn được quân đội Đại Việt tận dụng tài tình.', relicKey: 'dau-rong-hoang-thanh' }
+            { id: 'hs-coc', title: 'Trận địa phòng thủ Hàm Tử', top: '75%', left: '35%', detail: 'Quân dân Đại Việt tận dụng địa thế sông nước để bố trí phòng tuyến, chờ thời cơ phản công thủy binh của giặc.', relicKey: 'cung-lien-hop' },
+            { id: 'hs-thuytrieu', title: 'Dòng nước thủy triều Hàm Tử', top: '50%', left: '20%', detail: 'Địa thế sông ngòi hiểm trở với mức chênh lệch triều lên xuống cực lớn được quân đội Đại Việt tận dụng tài tình.', relicKey: 'dau-rong-hoang-thanh' }
           ]
         },
         {
@@ -350,20 +351,20 @@
           sfx: 'ÀO ÀO... NƯỚC TRIỀU BẮT ĐẦU RÚT XUỐNG!',
           desc: 'Sáng ngày 9-4-1288, thuyền chiến Ô Mã Nhi hùng hổ tiến vào sông. Thủy quân Đại Việt vờ thua tháo chạy. Đợi lúc nước triều đạt đỉnh rồi rút mạnh, thuyền ta quay đầu quyết chiến, dồn toàn bộ hạm đội giặc vào đúng trận địa cọc ngầm.',
           hotspots: [
-            { id: 'hs-omanhi', title: 'Chiến thuyền Ô Mã Nhi bị xé nát', top: '40%', left: '60%', detail: 'Soái thuyền kiêu hãnh của tướng giặc Ô Mã Nhi đâm sầm vào đầu cọc lim nhọn hoắt, thủng đáy và nghiêng ngả giữa dòng nước dữ.', relicKey: 'kiem-lenh-nha-tran' },
+            { id: 'hs-omanhi', title: 'Chiến thuyền Ô Mã Nhi thất thế', top: '40%', left: '60%', detail: 'Soái thuyền của tướng giặc rơi vào thế bị động giữa dòng nước dữ trước đòn phản công của quân Đại Việt.', relicKey: 'cung-lien-hop' },
             { id: 'hs-thuyenchien', title: 'Hạm đội giặc kẹt cứng', top: '65%', left: '75%', detail: 'Hơn 600 thuyền giặc chen lấn xô đẩy nhau, vỡ toác khi va phải các thân cọc lim từ từ nhô lên khỏi mặt nước.', relicKey: 'dau-rong-hoang-thanh' }
           ]
         },
         {
           id: 'p3-3',
-          title: 'Khung 3: Bão Lửa Bạch Đằng - Nhấn Chìm 600 Chiến Thuyền',
+          title: 'Khung 3: Bão Lửa Hàm Tử - Nhấn Chìm 600 Chiến Thuyền',
           speaker: 'Trần Quốc Tuấn & Tướng sĩ',
           dialogue: '"Nước triều đã rút cạn! Toàn quân xung phong! Bắt sống Ô Mã Nhi đền mạng cho dân lành!"',
           sfx: 'ÙNG OÀNH... BÃO LỬA BỐN BỀ RỰC SÁNG TRỜI ĐÊM!',
           desc: 'Đúng thời khắc vàng, phục binh Đại Việt từ hai bên bờ phóng hỏa tiễn, cho thuyền lửa xông thẳng vào thiêu rụi thuyền giặc. Tướng Yết Kiêu cùng toán quân lặn đục thủng đáy thuyền. Toàn bộ hạm đội giặc bị tiêu diệt, Ô Mã Nhi và Phàn Tiếp bị bắt sống tại trận.',
           hotspots: [
-            { id: 'hs-yetkieu', title: 'Dũng sĩ lặn đục thuyền Yết Kiêu', top: '85%', left: '45%', detail: 'Gia tướng Yết Kiêu với tài bơi lặn siêu phàm, thoắt ẩn thoắt hiện dưới dòng nước đục thủng thuyền giặc khiến chúng kinh hồn bạt vía.', relicKey: 'kiem-lenh-nha-tran' },
-            { id: 'hs-hoatien', title: 'Mũi tên lửa Đại Việt', top: '30%', left: '70%', detail: 'Hỏa tiễn cải tiến mang chất cháy cực mạnh, biến lòng sông Bạch Đằng thành một biển lửa thiêu rụi quân xâm lăng.', relicKey: 'dau-rong-hoang-thanh' }
+            { id: 'hs-yetkieu', title: 'Dũng sĩ lặn đục thuyền Yết Kiêu', top: '85%', left: '45%', detail: 'Gia tướng Yết Kiêu với tài bơi lặn siêu phàm, thoắt ẩn thoắt hiện dưới dòng nước đục thủng thuyền giặc khiến chúng kinh hồn bạt vía.', relicKey: 'cung-lien-hop' },
+            { id: 'hs-hoatien', title: 'Mũi tên lửa Đại Việt', top: '30%', left: '70%', detail: 'Hỏa tiễn cải tiến mang chất cháy cực mạnh, biến lòng sông Hàm Tử thành một biển lửa thiêu rụi quân xâm lăng.', relicKey: 'dau-rong-hoang-thanh' }
           ]
         },
         {
@@ -372,7 +373,7 @@
           speaker: 'Vua Trần Nhân Tông',
           dialogue: '"Xã tắc hai phen chồn ngựa đá · Non sông nghìn thuở vững âu vàng"',
           sfx: 'TÙNG TÙNG TÙNG... TRỐNG HỘI THĂNG LONG RỘN RÃ NON SÔNG!',
-          desc: 'Chiến thắng Bạch Đằng năm 1288 đập tan hoàn toàn cuộc xâm lăng của đế quốc Mông Nguyên. Vua tôi nhà Trần làm lễ tế trời đất tổ tiên tại Chiêu Lăng, đón mừng nền hòa bình thịnh trị rực rỡ muôn thuở.',
+          desc: 'Chiến thắng Hàm Tử năm 1288 đập tan hoàn toàn cuộc xâm lăng của đế quốc Mông Nguyên. Vua tôi nhà Trần làm lễ tế trời đất tổ tiên tại Chiêu Lăng, đón mừng nền hòa bình thịnh trị rực rỡ muôn thuở.',
           hotspots: [
             { id: 'hs-thanglong', title: 'Hoàng thành Thăng Long ngày khải hoàn', top: '30%', left: '45%', detail: 'Kinh đô rợp bóng cờ hoa đón mừng đoàn quân chiến thắng trở về trong tiếng hoan hô ngút trời của nhân dân.', relicKey: 'dau-rong-hoang-thanh' },
             { id: 'hs-auvang', title: 'Đầu rồng lá đề mái cung điện', top: '65%', left: '50%', detail: 'Bảo vật đất nung thời Trần với hình tượng rồng uy nghiêm uốn lượn, minh chứng cho thời kỳ phục hưng văn hóa Đại Việt đỉnh cao.', relicKey: 'dau-rong-hoang-thanh' }
@@ -1021,6 +1022,14 @@
       quote: '"Bệ hạ chém đầu tôi trước rồi hãy hàng!"',
       bio: 'Thiên tài quân sự kiệt xuất bậc nhất lịch sử Việt Nam, linh hồn của hai cuộc kháng chiến chống quân Nguyên Mông đại thắng (1285 và 1288). Ông là tác giả "Hịch Tướng Sĩ" và "Binh thư yếu lược". Sau khi mất, ông được nhân dân tôn kính phụng thờ là Đức Thánh Trần Cửu Thiên Vũ Đế.'
     },
+        'tran-nhat-duat': {
+      name: 'Chiêu Văn Vương Trần Nhật Duật',
+      years: '1255 – 1330',
+      role: 'Thái sư & Bậc thầy Ngoại giao nhà Trần',
+      quote: '"Người Tống ngỡ là bậc tôn sư ở Trung Nguyên!"',
+      bio: 'Hoàng tử thứ sáu của vua Trần Thái Tông, nổi tiếng uyên bác, thông thạo nhiều ngoại ngữ và am hiểu sâu sắc phong tục các dân tộc. Ông không chỉ lập đại công tại trận Hàm Tử đánh tan quân Nguyên (1285), mà còn dùng tài ngoại giao thu phục Trịnh Giác Mật mà không tốn một mũi tên. Ông phò tá qua bốn triều vua Trần, được tôn làm bậc nguyên lão triều đình.'
+    },
+
     'tran-quoc-toan': {
       name: 'Hoài Văn Hầu Trần Quốc Toản',
       years: '1267 – 1285',
@@ -1028,12 +1037,20 @@
       quote: '"Phá Cường Địch, Báo Hoàng Ân"',
       bio: 'Hình tượng thiếu niên anh hùng tiêu biểu của dân tộc. Căm giận vì không được dự bàn việc nước tại bến Bình Than, chàng đã bóp nát quả cam vua ban, về chiêu mộ hơn ngàn gia binh, tự thêu lá cờ sáu chữ vàng xung trận xông pha lập nhiều chiến công hiển hách.'
     },
-    'tran-thu-do': {
-      name: 'Thái sư Trần Thủ Độ',
-      years: '1194 – 1264',
+        'tran-binh-trong': {
+      name: 'Bảo Nghĩa vương Trần Bình Trọng',
+      years: '1259 – 1285',
+      role: 'Danh tướng trung liệt · Anh hùng chống Nguyên Mông',
+      quote: '"Ta thà làm quỷ nước Nam, chứ không thèm làm vương đất Bắc!"',
+      bio: 'Vị danh tướng kiệt xuất đã chỉ huy trận chặn đánh quân Nguyên Mông tại bãi Thiên Mạc, bảo vệ an toàn cho hai vua Trần rút lui. Khi sa vào tay giặc, ông kiên quyết từ chối mọi sự dụ dỗ và khẳng khái hy sinh, để lại tấm gương sáng ngời về khí tiết dân tộc.'
+    },
+
+    'tran-quang-khai': {
+      name: 'Chiêu Minh đại vương Trần Quang Khải',
+      years: '1241 – 1294',
       role: 'Khai quốc công thần · Linh hồn vương triều',
-      quote: '"Đầu tôi chưa rơi xuống đất, xin bệ hạ đừng lo!"',
-      bio: 'Người đặt nền móng kiến lập vương triều Trần rực rỡ. Trong cuộc kháng chiến chống Mông Cổ lần I (1258), câu nói đanh thép của ông đã giữ vững lòng quân dân, xoay chuyển cục diện kháng chiến.'
+      quote: '"Chương Dương cướp giáo giặc Hàm Tử bắt quân thù. Thái bình nên gắng sức,Non nước ấy ngàn thu"',
+      bio: 'Trong hai cuộc kháng chiến chống quân Nguyên – Mông lần thứ hai (1285) và lần thứ ba (1288), ông là một trong những chỉ huy chủ chốt (chỉ sau Trần Hưng Đạo). Ông có công lớn trong các trận thắng tại Chương Dương độ, Hàm Tử quan, góp phần giải phóng kinh thành Thăng Long.'
     },
     'tran-nhan-tong': {
       name: 'Phật hoàng Trần Nhân Tông',
@@ -1042,6 +1059,21 @@
       quote: '"Xã tắc hai phen chồn ngựa đá / Non sông nghìn thuở vững âu vàng"',
       bio: 'Vị hoàng đế anh minh đã triệu tập Hội nghị Bình Than và Hội nghị Diên Hồng, gắn kết lòng dân trăm họ đánh bại hai đạo quân xâm lược Nguyên Mông. Khi thái bình, ngài nhường ngôi đi tu và sáng lập Thiền phái Trúc Lâm Yên Tử.'
     },
+    'tran-anh-tong': {
+      name: 'Vua Trần Anh Tông',
+      years: '1276 – 1320',
+      role: 'Minh quân trị quốc · Mở mang bờ cõi',
+      quote: '"Nước nhà đang lúc thanh bình / Giữ yên xã tắc, trọng người hiền tài"',
+      bio: 'Vị hoàng đế thứ tư của nhà Trần đã đưa Đại Việt bước vào thời kỳ thái bình, hưng thịnh sau chiến tranh. Ngài nổi tiếng với việc trọng dụng nhân tài, giữ vững kỷ cương phép nước và tiếp nhận hai châu Ô, Rí qua cuộc hôn nhân ngoại giao của công chúa Huyền Trân.'
+    },
+    'da-tuong': {
+      name: 'Gia tướng Dã Tượng',
+      years: 'Thế kỷ XIII (Không rõ năm sinh – mất)',
+      role: 'Mãnh tướng tượng binh · Trung thần dưới trướng Trần Hưng Đạo',
+      quote: '"Yết Kiêu chưa thấy Đại Vương thì nhất định không dời thuyền"',
+      bio: 'Một trong năm gia tướng thân tín và tài giỏi nhất của Hưng Đạo Đại Vương Trần Quốc Tuấn. Ông nổi tiếng với tài thuần phục voi chiến, lập nhiều chiến công vang dội trong kháng chiến chống Nguyên Mông và được chủ tướng ví như chiếc trụ cánh của chim hồng hộc.'
+    },
+
     'yet-kieu': {
       name: 'Gia tướng Yết Kiêu',
       years: 'Thế kỷ XIII',
@@ -1150,8 +1182,8 @@
     },
     'dai-thang-bach-dang-1288': {
       year: 'Năm 1288',
-      location: 'Cửa biển sông Bạch Đằng, Quảng Ninh - Hải Phòng',
-      title: 'Đại thắng Sông Bạch Đằng 1288',
+      location: 'Cửa biển sông Hàm Tử, Quảng Ninh - Hải Phòng',
+      title: 'Đại thắng Sông Hàm Tử 1288',
       core: 'Trận thủy chiến thiên tài chôn vùi vĩnh viễn dã tâm xâm lược Đại Việt của đế quốc Nguyên Mông.',
       desc: 'Quốc công Tiết chế Trần Hưng Đạo vận dụng tài tình quy luật thủy triều, cắm bãi cọc ngầm lim bịt kín lối rút lui của địch. Khi thủy triều rút, toàn bộ đoàn thuyền chiến hơn 600 chiến thuyền của Ô Mã Nhi bị xé nát, Ô Mã Nhi và Phàn Tiếp bị bắt sống.',
       heroes: ['Trần Hưng Đạo', 'Trần Khánh Dư', 'Yết Kiêu', 'Dã Tượng']
@@ -1231,59 +1263,94 @@
 
   // --- 6. TƯ LIỆU HIỆN VẬT & PHÒNG 360° (PAGE 06 & 07) ---
   const ARTIFACT_DATA = {
-    'thap-gom-hoa-nau': {
-      title: 'Thạp Gốm Hoa Nâu Chạm Khắc Võ Sĩ',
-      tag: 'Bảo vật Quốc gia thời Trần',
-      img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg',
-      period: 'Thế kỷ XIII - XIV',
-      material: 'Gốm men tro phủ oxit sắt (Hoa nâu truyền thống)',
-      dimension: 'Cao 45cm, đường kính miệng 30cm',
-      desc: 'Thạp gốm hoa nâu thời Trần là đỉnh cao của mỹ thuật gốm Đại Việt. Thân thạp được tạo dải băng hoa sen kép ở chân đế và vai, phần thân chính chạm khắc nổi hình tượng các chiến sĩ Đại Việt mình trần, quấn khố, xăm trổ, cưỡi tuấn mã cầm giáo và trường kiếm trong khí thế hào hùng.'
+        'kiem-a-au': {
+      title: 'Kiếm cong Á-Âu (Tiền thân kiếm Mông Cổ)',
+      tag: 'Quân khí kỵ binh Mông Cổ',
+      img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg', // Bạn nhớ đổi lại đúng tên file ảnh kiếm của mình nhé
+      period: 'Thế kỷ XIII',
+      material: 'Thép rèn thủ công, chuôi bọc gỗ/da',
+      dimension: 'Dài tổng thể 95cm, lưỡi rộng 3.5cm',
+      archive: '#MN-YUAN-VK-01',
+      location: 'Thảo nguyên Á-Âu · Hiện vật chiến trường Đại Việt – Nguyên Mông',
+      desc: 'Loại đao kiếm lưỡi cong một cạnh đặc trưng của kỵ binh du mục Á-Âu, tiền thân trực tiếp của kiếm Mông Cổ. Thiết kế độ cong tối ưu giúp tăng lực chém lướt khi phi ngựa ở tốc độ cao, là vũ khí cận chiến chủ lực của quân Nguyên Mông trong ba lần xâm lược Đại Việt.'
     },
-    'dau-rong-la-de': {
-      title: 'Đầu Rồng Lá Đề Đất Nung Thăng Long',
-      tag: 'Bảo vật Quốc gia thời Trần',
+
+    'am-ruou-canh-sen': {
+      title: 'Ấm Rượu Có Nắp Trang Trí Cánh Sen',
+      tag: 'Gốm sứ thời Trần',
+      img: 'images/ruou.jpg',
+      period: 'Thế kỷ XIII - XIV',
+      material: 'Gốm men ngà trang trí cánh sen',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#VN-TRAN-GOM-02',
+      location: 'Sưu tập gốm Đại Việt thời Trần',
+      desc: 'Ấm rượu gốm thời Trần với thân tạo dáng thanh thoát, nắp và vai ấm trang trí cánh sen, thể hiện ảnh hưởng sâu đậm của mỹ thuật Phật giáo.'
+    },
+    'thap-men-nga-vinh-quy': {
+      title: 'Thạp Men Ngà Vẽ Nâu “Vinh Quy Bái Tổ”',
+      tag: 'Gốm sứ thời Trần',
+      img: 'images/thapmen.jpg',
+      period: 'Thế kỷ XIII - XIV',
+      material: 'Gốm men ngà vẽ nâu',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#VN-TRAN-GOM-03',
+      location: 'Sưu tập gốm hoa nâu Đại Việt',
+      desc: 'Thân thạp phủ men ngà, trang trí bằng sắc nâu sắt với đề tài vinh quy bái tổ, một tư liệu sinh động về lễ nghi và đời sống xã hội thời Trần.'
+    },
+    'hop-dung-cung-ong-ten': {
+      title: 'Hộp Đựng Cung Và Ống Đựng Tên',
+      tag: 'Quân khí kỵ binh Mông Cổ',
       img: 'images/artifact_dau_rong_lade_1792135273755.jpg',
       period: 'Thế kỷ XIII',
-      material: 'Đất nung chạm nổi hai mặt',
-      dimension: 'Cao 60cm, rộng 48cm',
-      desc: 'Hiện vật điêu khắc kiến trúc trang trí bờ nóc mái cung điện Hoàng thành Thăng Long thời Trần. Hình tượng rồng thời Trần mang dáng dấp khỏe khoắn, uyển chuyển với thân hình lượn sóng nhịp nhàng, bờm dài cuộn mây, thể hiện tinh thần phóng khoáng và sức sống mãnh liệt của dân tộc sau đại thắng ngoại xâm.'
+      material: 'Da cứng gia cố, có dây đeo hông',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#YUAN-ARCHERY-01',
+      location: 'Không gian kỵ xạ Mông Cổ và Tây Tạng',
+      desc: 'Là loại bao da cứng đeo bên hông của các cung thủ cưỡi ngựa, dùng bảo quản cung và mang theo ống đựng tên khi hành quân.'
     },
-    'bai-coc-bach-dang': {
-      title: 'Cọc Gỗ Lim Sông Bạch Đằng',
-      tag: 'Di vật Chiến trường Lịch sử',
+    'cung-lien-hop': {
+      title: 'Cung Liên Hợp',
+      tag: 'Quân khí kỵ binh Mông Cổ',
       img: 'images/comic_page_bachdang_1792135273305.jpg',
-      period: 'Năm 1288',
-      material: 'Gỗ lim cổ thụ vát nhọn đầu',
-      dimension: 'Dài 2.5m - 3.2m, đường kính 20 - 30cm',
-      desc: 'Chứng tích hào hùng dưới đáy sông Bạch Đằng. Hàng vạn cây gỗ lim được quân dân Đại Việt đẵn từ rừng, vát nhọn và cắm ngầm dưới lòng sông để đón bắt toàn bộ chiến thuyền thủy binh Ô Mã Nhi năm 1288.'
+      period: 'Thế kỷ XIII',
+      material: 'Gỗ, sừng và gân ghép nhiều lớp',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#YUAN-ARCHERY-02',
+      location: 'Trang bị tiêu biểu của kỵ binh thảo nguyên',
+      desc: 'Cung liên hợp, còn gọi là cung đa hợp hoặc cung phức hợp, được ghép từ nhiều vật liệu để tạo lực bắn mạnh trong một thân cung nhỏ gọn, phù hợp với kỵ xạ.'
     },
-    'kiem-lenh-nha-tran': {
-      title: 'Thanh Kiếm Lệnh & Hổ Phù Triều Trần',
-      tag: 'Binh khí & Quân chỉ',
+    'bao-dung-cung-mong-co': {
+      title: 'Bao Đựng Cung Kiểu Mông Cổ',
+      tag: 'Quân khí kỵ binh Mông Cổ',
       img: 'images/comic_page_tranquoctoan_1792135273832-.jpg',
       period: 'Thế kỷ XIII',
-      material: 'Đồng thau đúc & chuôi dát vàng',
-      dimension: 'Dài 85cm',
-      desc: 'Kiếm lệnh quân chỉ huy của triều đình nhà Trần cùng tấm hổ phù khắc chữ Hán biểu trưng cho quyền điều binh khiển tướng của Tiết chế Quốc công Trần Hưng Đạo.'
+      material: 'Da thuộc có trang trí',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#YUAN-ARCHERY-03',
+      location: 'Trang bị đeo thắt lưng của cung thủ cưỡi ngựa',
+      desc: 'Bao đựng cung làm bằng da có trang trí, thường được đeo vào thắt lưng để cung thủ có thể cất và rút cung nhanh khi cưỡi ngựa.'
     },
-    'bat-men-ngoc-sen': {
-      title: 'Bát Gốm Men Ngọc Khắc Cánh Sen',
-      tag: 'Đồ ngự dụng Cung đình',
-      img: 'images/artifact_thap_gom_hoanau_1792135273950.jpg',
-      period: 'Thế kỷ XIII',
-      material: 'Gốm men ngọc (Celadon)',
-      dimension: 'Đường kính miệng 18cm',
-      desc: 'Được chế tác tinh xảo với lớp men ngọc bóng mịn, bên ngoài chạm khắc nhiều lớp cánh sen thanh thoát, phản ánh tinh thần Phật giáo Đại thừa nhập thế sâu đậm dưới triều đại nhà Trần.'
+    'chom-mu-mong-co': {
+      title: 'Chỏm Mũ Mông Cổ Thế Kỷ XIII - XIV',
+      tag: 'Quân khí Đế quốc Mông Cổ',
+      img: 'images/Helmet bowl, probably Mongolian, made in central or eastern Asia during the Yuan dynasty, 13th – 14th century. XXVIA.192.jpg.webp',
+      period: 'Thế kỷ XIII - XIV',
+      material: 'Sắt rèn; nguyên bản có tấm che gáy',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#YUAN-ARMOR-01',
+      location: 'Trung Á hoặc Đông Á thời Nguyên',
+      desc: 'Phần mép dưới của chỏm mũ vốn từng được gắn thêm một tấm che gáy làm bằng vải hoặc các phiến giáp nhỏ kết nối với nhau.'
     },
-    'an-mon-ha-tham-su': {
-      title: 'Ấn Đồng "Môn Hạ Thẩm Sự"',
-      tag: 'Bảo vật Quốc gia · Ấn chương triều đình',
-      img: 'images/artifact_dau_rong_lade_1792135273755.jpg',
-      period: 'Năm Đắc Long thứ 5 (1226)',
-      material: 'Đồng nguyên khối đúc nổi',
-      dimension: 'Cạnh 7.5cm x 7.5cm, cao 8cm',
-      desc: 'Ấn tín tối cao của cơ quan Môn Hạ Sảnh triều Trần, dùng đóng dấu lên các chỉ dụ và văn bản cơ mật quân quốc triều đình.'
+    'tuoc-ruou-chim-vet': {
+      title: 'Tước Rượu Hình Chim Vẹt',
+      tag: 'Gốm hoa nâu',
+      img: 'images/tuocruouchimvet.jpg',
+      period: 'Thế kỷ XII - XIII',
+      material: 'Gốm hoa nâu tạo hình chim vẹt',
+      dimension: 'Kích thước theo hồ sơ hiện vật',
+      archive: '#VN-GOM-TUOC-01',
+      location: 'Sưu tập gốm hoa nâu Đại Việt',
+      desc: 'Tước rượu tạo hình chim vẹt là hiện vật gốm hoa nâu độc đáo, kết hợp công năng đồ uống với nghệ thuật tạo hình sinh động.'
     }
   };
 
@@ -1312,7 +1379,8 @@
   };
 
   window.openArtifact = function (artifactId) {
-    window.location.href = `HaoKhiDongA_Trang_07_page-inspector.html?id=${artifactId}`;
+    if (!ARTIFACT_DATA[artifactId]) artifactId = 'thap-gom-hoa-nau';
+    window.location.href = `HaoKhiDongA_Trang_07_page-inspector.html?id=${encodeURIComponent(artifactId)}`;
   };
 
   // --- 6. TƯ LIỆU HIỆN VẬT & HIỆU ỨNG MỞ HỘP QUÀ BÍ MẬT 3D (PAGE 06 & 07) ---
@@ -1484,6 +1552,10 @@
     const data = ARTIFACT_DATA[artId];
     if (!data) return;
 
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set('id', artId);
+    window.history.replaceState({}, '', nextUrl);
+
     // Cập nhật thông tin vào DOM
     updateInspectorDOM(data);
 
@@ -1529,10 +1601,19 @@
     }
 
     const caption = document.getElementById('inspector-caption');
-    if (caption) caption.textContent = `${data.title} · Bảo vật quốc gia thời Trần`;
+    if (caption) caption.textContent = `${data.title} · ${data.location || data.tag}`;
+
+    const tag = document.getElementById('inspector-tag');
+    if (tag) tag.textContent = data.tag;
+
+    const bannerTag = document.getElementById('inspector-banner-tag');
+    if (bannerTag) bannerTag.textContent = `✦ ${data.tag} · Hồ sơ hiện vật`;
 
     const dossierH3 = document.getElementById('inspector-dossier-title');
     if (dossierH3) dossierH3.textContent = `Hồ Sơ: ${data.title}`;
+
+    const archive = document.getElementById('inspector-archive');
+    if (archive) archive.textContent = `Số lưu trữ: ${data.archive || '#VN-TRAN-07'}`;
 
     const dossierDesc = document.getElementById('inspector-desc');
     if (dossierDesc) dossierDesc.textContent = data.desc;
@@ -1551,8 +1632,9 @@
   function initInspectorPage() {
     const params = new URLSearchParams(window.location.search);
     const artId = params.get('id') || 'thap-gom-hoa-nau';
-    currentArtifactId = artId;
-    const data = ARTIFACT_DATA[artId] || ARTIFACT_DATA['thap-gom-hoa-nau'];
+    const resolvedId = ARTIFACT_DATA[artId] ? artId : 'thap-gom-hoa-nau';
+    currentArtifactId = resolvedId;
+    const data = ARTIFACT_DATA[resolvedId];
 
     updateInspectorDOM(data);
 
