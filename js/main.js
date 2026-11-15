@@ -191,7 +191,7 @@
       title: 'Chương 1: Hội nghị Diên Hồng',
       subtitle: 'Ý chí thiếu niên & Hội nghị bàn kế giữ nước năm 1282',
       epoch: 'Tháng 10 năm 1282 · Bến Bình Than (Hải Dương)',
-      summary: 'Đứng trước họa xâm lăng của 50 vạn quân Nguyên Mông hung hãn, vua tôi nhà Trần mở đại hội nghị quân sự tại bến Bình Than. Hoài Văn Hầu Trần Quốc Toản vì còn nhỏ tuổi không được vào dự bàn, uất ức bóp nát quả cam sành vua ban, tự chiêu mộ hơn ngàn gia binh thêu cờ sáu chữ vàng xung trận lập chiến công hiển hách.',
+      summary: 'Đứng trước họa xâm lăng của 50 vạn quân Nguyên Mông hung hãn, vua tôi nhà Trần mở đại hội nghị quân sự tại bến Bình Than. Hoài Văn Hầu Trần Quốc Toản vì còn nhỏ tuổi không được vào dự bàn, uất ức bóp nát quả cam vua ban, tự chiêu mộ hơn ngàn gia binh thêu cờ sáu chữ vàng xung trận lập chiến công hiển hách.',
       historicalNote: 'Hội nghị Bình Than năm 1282 là bước ngoặt quyết định thể hiện sự thống nhất ý chí của tầng lớp quý tộc lãnh đạo triều Trần, kết hợp cùng hào khí quật cường của thế hệ thanh niên tuổi trẻ cứu nước mà biểu tượng bất tử là Trần Quốc Toản.',
       nextChapId: 'chap-2',
       nextChapTitle: 'Chương 2: Hào Khí Diên Hồng - Muôn Người Cùng Hô Đánh',
@@ -220,7 +220,7 @@
           sfx: 'RĂNG RẮC... NƯỚC CAM TRÀO QUA KẼ TAY!',
           desc: 'Hoài Văn Hầu khi ấy mới 15 tuổi, nóng lòng xin đánh nhưng bị lính canh cản lại vì chưa đến tuổi thành niên. Đức vua thương chàng trẻ tuổi mà khẳng khái nên ban quả cam sành an ủi. Vì căm giận lũ giặc dữ và uất ức chưa được dự bàn, chàng siết chặt tay bóp nát quả cam lúc nào không hay.',
           hotspots: [
-            { id: 'hs-cam', title: 'Quả cam sành Bình Than', top: '56%', left: '49%', detail: 'Quả cam sành vỏ dày, thơm ngọt được vua Trần Nhân Tông ban tặng, trở thành biểu tượng cho ngọn lửa sục sôi nhiệt huyết của tuổi trẻ cứu nước.', relicKey: 'bao-dung-cung-mong-co' },
+            { id: 'hs-cam', title: 'Quả cam sành Bình Than', top: '56%', left: '49%', detail: 'Quả cam vỏ dày, thơm ngọt được vua Trần Nhân Tông ban tặng, trở thành biểu tượng cho ngọn lửa sục sôi nhiệt huyết của tuổi trẻ cứu nước.', relicKey: 'bao-dung-cung-mong-co' },
             { id: 'hs-chienbao', title: 'Chiến bào nhung phục thiếu niên', top: '75%', left: '26%', detail: 'Nhung phục của võ tướng Đại Việt thời Trần, gọn gàng cơ động thích hợp với địa hình sông nước đầm lầy.', relicKey: 'thap-gom-hoa-nau' }
           ]
         },
@@ -1678,12 +1678,12 @@
       topic: 'Nhân vật lịch sử',
       options: [
         'Quả bưởi đào',
-        'Quả cam sành',
+        'Quả cam',
         'Quả lựu chín',
         'Quả thị vàng'
       ],
       correct: 1,
-      explanation: 'Chính xác! Tại bến Bình Than năm 1282, do tuổi còn nhỏ chưa đủ quyền dự bàn quân cơ, chàng thiếu niên Trần Quốc Toản đã vô tình bóp nát quả cam sành quý do vua ban lúc nào không hay vì lòng căm tức sục sôi.'
+      explanation: 'Chính xác! Tại bến Bình Than năm 1282, do tuổi còn nhỏ chưa đủ quyền dự bàn quân cơ, chàng thiếu niên Trần Quốc Toản đã vô tình bóp nát quả cam quý do vua ban lúc nào không hay vì lòng căm tức sục sôi.'
     },
     {
       question: 'Ai là tác giả của thiên cổ hùng văn "Hịch Tướng Sĩ"?',
