@@ -796,6 +796,7 @@ html {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  min-width: 0;
 }
 
 .reader-stage__hint {
@@ -915,6 +916,7 @@ html {
 
 /* Keep the artwork edge-to-edge in a continuous vertical strip. */
 .webtoon-chapter-strip {
+  display: flow-root;
   width: 100%;
   margin-inline: auto;
   background: #fff;
@@ -923,26 +925,41 @@ html {
 
 .webtoon-strip-section {
   position: relative;
+  display: block;
+  clear: both;
+  isolation: isolate;
   width: 100%;
+  height: auto;
+  min-height: 0;
   margin: 0;
   overflow: visible;
   border: 0;
   border-radius: 0;
   background: #fff;
   box-shadow: none;
+  transform: none !important;
 }
 
 .webtoon-page-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
   overflow: visible;
   background: #fff;
   box-shadow: none;
   line-height: 0;
+  transform: none !important;
 }
 
 .webtoon-page-frame .webtoon-strip-image {
+  position: static !important;
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 0;
   margin: 0;
   object-fit: contain;
   transform: none !important;
@@ -1057,14 +1074,32 @@ html {
 
   .webtoon-width-standard,
   .webtoon-width-wide {
-    width: calc(100% + 2rem);
-    max-width: none;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .webtoon-chapter-strip {
+    width: 100%;
+    max-width: 100%;
     box-shadow: none;
+  }
+
+  .reader-stage,
+  #webtoon-strip-container,
+  .webtoon-strip-section,
+  .webtoon-page-frame,
+  .webtoon-page-frame .webtoon-strip-image {
+    max-width: 100%;
+  }
+
+  .webtoon-strip-section + .webtoon-strip-section {
+    margin-top: 32px !important;
+  }
+
+  .hotspots-layer {
+    overflow: hidden;
   }
 
   .webtoon-strip-section .webtoon-dialogue-box {

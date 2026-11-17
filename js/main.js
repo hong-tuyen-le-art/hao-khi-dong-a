@@ -1880,6 +1880,11 @@
       chap.pages = Array.from(template.content.querySelectorAll('img'), (image, index) => {
         const pageIdx = index + 1;
         image.classList.add('webtoon-strip-image');
+        // Kích thước khai báo cũ không khớp với nhiều ảnh thật, làm trình duyệt
+        // giữ sai tỷ lệ trên mobile trước khi ảnh lazy-load. Để ảnh tự xác định
+        // chiều cao theo nội dung thật và luôn nằm trong luồng dọc của trang.
+        image.removeAttribute('width');
+        image.removeAttribute('height');
         image.loading = index === 0 ? 'eager' : 'lazy';
         image.decoding = 'async';
 
